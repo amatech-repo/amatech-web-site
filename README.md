@@ -3,7 +3,8 @@
 
 ## 環境構築
 1. `git clone amatech-repo/amatech-web-site`
-2. 
+2. `npm i`
+3. `npm run dev`
 
 ## Branch strategy
 * 機能開発: feature/ブランチ名
