@@ -3,7 +3,15 @@
 
 ## 環境構築
 1. `git clone amatech-repo/amatech-web-site`
-2. 
+2. `npm i`
+3. `npm run dev`
+
+## storybookについて
+`npm run sb`で実行
+
+## chromaticについて
+- .stories.jsを作成している場合、UIを変更したら差分を検出できる。
+- github actionsでPR作成時に自動実行
 
 ## Branch strategy
 * 機能開発: feature/ブランチ名
