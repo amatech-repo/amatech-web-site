@@ -16,10 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
-      <body>
+    <html lang="ja" style={{ height: "100%" }}>
+      <body style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <Header />
-        <main>{children}</main>
+        <main style={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "center" }}>{children}</main>
         <Footer />
       </body>
     </html>
