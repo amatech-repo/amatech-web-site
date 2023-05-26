@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix && prettier --write src",
+    "lint": "next lint",
+    "format": "next lint --fix && prettier --write src",
     "sb": "storybook dev -p 6006",
     "build-sb": "storybook build"
   },
