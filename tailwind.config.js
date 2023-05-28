@@ -27,9 +27,9 @@ module.exports = {
       },
     },
     fontFamily: {
-      base: "YuGothic",
-      concept: "YuMincho",
-      title: "Urbanist",
+      base: "YuGothic", // 游ゴシック
+      concept: "YuMincho", // 游明朝体
+      title: "Urbanist", // アーバニスト
     },
   },
   plugins: [],
