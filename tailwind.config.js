@@ -26,6 +26,11 @@ module.exports = {
         white: colors.white,
       },
     },
+    fontFamily: {
+      base: "YuGothic",
+      concept: "YuMincho",
+      title: "Urbanist",
+    },
   },
   plugins: [],
 };
