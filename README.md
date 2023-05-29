@@ -14,8 +14,8 @@
 - github actionsでPR作成時に自動実行
 
 ## Branch strategy
-* 機能開発: feature/ブランチ名
-* バグ修正: hotfix/ブランチ名, bug/ブランチ名
+* 機能開発: features-ブランチ名
+* バグ修正: hotfix-ブランチ名, bug-ブランチ名
 
 ## Commit message
 ```shell
