@@ -1,12 +1,18 @@
 import Image from "next/image";
 
-export const Admin = (admin: { name: string; role: string; grade: string }) => {
+type Props = {
+  name: string;
+  role: string;
+  grade: string;
+};
+
+export const Admin = ({ name, role, grade }: Props) => {
   return (
     <div className="w-321 h-164 rounded-4xl bg-white">
       <Image src="/icons/sample.svg" alt="" width={94} height={94} />
-      <p className="font-YuGothic font-extralight text-base">{admin.name}</p>
-      <p className="text-amatech-log">{admin.role}</p>
-      <p className="text-grade">{admin.grade}</p>
+      <p className="font-YuGothic font-extralight text-base">{name}</p>
+      <p className="text-amatech-log">{role}</p>
+      <p className="text-grade">{grade}</p>
       <Image src="/icons/twitter.svg" width={25} height={25} alt={""} />
     </div>
   );
