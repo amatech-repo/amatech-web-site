@@ -32,5 +32,15 @@ module.exports = {
       title: "Urbanist", // アーバニスト
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        ".text-white-shadow": {
+          textShadow: "4px 5px 0px white"
+        }
+      };
+
+      addUtilities(newUtilities);
+    }
+  ],
 };
