@@ -13,9 +13,16 @@
 - .stories.jsを作成している場合、UIを変更したら差分を検出できる。
 - github actionsでPR作成時に自動実行
 
+## tailwindについて
+- className内に記述する
+```TypeScript
+{* 例 *}
+<h1 className="{* プロパティ名 *}">hoge</h1>
+```
+
 ## Branch strategy
-* 機能開発: features-ブランチ名
-* バグ修正: hotfix-ブランチ名, bug-ブランチ名
+- 機能開発: features-ブランチ名
+- バグ修正: hotfix-ブランチ名, bug-ブランチ名
 
 ## Commit message
 ```shell
