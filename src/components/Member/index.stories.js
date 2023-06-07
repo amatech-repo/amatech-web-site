@@ -12,4 +12,5 @@ Default.args = {
   name: "あまてく　太郎",
   role: "代表",
   grade: "2回生",
+  twitter: "",
 };
