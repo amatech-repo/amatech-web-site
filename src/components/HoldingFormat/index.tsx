@@ -9,7 +9,7 @@ export const HoldingFormat = () => {
         dayOfWeek="月曜日"
         text="対面・オンラインで毎週交互に開催しています！"
       />
-      <div className="flex space-x-4 my-4">
+      <div className=" md:flex md:space-x-4 my-4">
         <HoldingFormatCard
           holdingFormat="対面"
           image="./icons/study.svg"
