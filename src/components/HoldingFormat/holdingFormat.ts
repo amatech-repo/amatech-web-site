@@ -5,6 +5,7 @@ export interface HoldingWeek {
 }
 
 export interface HoldingFormat {
+  discordLogo?: string;
   holdingFormat: "対面" | "オンライン";
   image: string;
   place: string;
