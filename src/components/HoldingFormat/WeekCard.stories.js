@@ -1,7 +1,7 @@
-import WeekCard from "./WeekCard";
+import { WeekCard } from "./WeekCard";
 
 export default {
-  title: "Components/WeekCard",
+  title: "Components/HoldingFormat/WeekCard",
   component: WeekCard,
   argTypes: {
     holdingWeek: {

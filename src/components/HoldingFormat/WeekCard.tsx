@@ -3,9 +3,9 @@ import { HoldingWeek } from "./holdingFormat";
 
 export const WeekCard = ({ holdingWeek, dayOfWeek, text }: HoldingWeek) => {
   return (
-    <div className="w-full mx-auto shadow-xl px-36 py-8 rounded-3xl">
-      <div className="flex items-center justify-center">
-        <div className="mr-2">
+    <div className="max-w-3xl mx-auto sm:mx-4 shadow-md px-20 md:px-36 py-8 rounded-3xl font-bold">
+      <div className="flex items-end justify-center font-concept">
+        <div className="mr-1">
           <h5 className="text-xl">{holdingWeek}</h5>
         </div>
         <div className="ml-2">
@@ -13,7 +13,7 @@ export const WeekCard = ({ holdingWeek, dayOfWeek, text }: HoldingWeek) => {
         </div>
       </div>
       <div className="text-center mt-4">
-        <p className="text-gray">{text}</p>
+        <p className="text-gray text-base">{text}</p>
       </div>
     </div>
   );
