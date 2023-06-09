@@ -13,6 +13,9 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        small: "url('/background/sections/small.svg')",
+        medium: "url('/background/sections/medium.svg')",
+        large: "url('/background/sections/large.svg')",
       },
       colors: {
         main: "#333", // メインテキスト
@@ -33,14 +36,14 @@ module.exports = {
     },
   },
   plugins: [
-    function({ addUtilities }) {
+    function ({ addUtilities }) {
       const newUtilities = {
         ".text-white-shadow": {
-          textShadow: "4px 5px 0px white"
-        }
+          textShadow: "2px 4px 0px white",
+        },
       };
 
       addUtilities(newUtilities);
-    }
+    },
   ],
 };
