@@ -13,4 +13,6 @@ Default.args = {
   role: "代表",
   grade: "2回生",
   twitter: "",
+  instagram: "",
+  github: "",
 };
