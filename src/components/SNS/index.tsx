@@ -16,7 +16,7 @@ export const SNS = (props: Props) => {
             src={"/icons/" + sns + ".svg"}
             width={16}
             height={16}
-            alt={""}
+            alt={sns + "のアイコン"}
           />
         </a>
       ) : (
