@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import LinkIcon from "../LinkIcon";
+import { LinkIcon } from "../LinkIcon";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="bg-white grid grid-cols-12 pt-12 pb-4">
       <Link href="/" className="row-start-1 col-start-3">
@@ -50,5 +50,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

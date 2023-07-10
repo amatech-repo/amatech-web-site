@@ -7,7 +7,7 @@ interface Props {
   alt: string;
 }
 
-export default function LinkIcon({ url, img, alt }: Props) {
+export const LinkIcon = ({ url, img, alt }: Props) => {
   return (
     <Link
       href={url}
@@ -17,4 +17,4 @@ export default function LinkIcon({ url, img, alt }: Props) {
       <Image alt={alt} src={img} width={30} height={30} />
     </Link>
   );
-}
+};
