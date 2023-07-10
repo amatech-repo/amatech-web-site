@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import LinkIcon from "../LinkIcon";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="bg-white grid grid-cols-12 pt-12 pb-4">
       <Link href="/" className="row-start-1 col-start-3">
@@ -50,14 +51,4 @@ export const Footer = () => {
   );
 };
 
-function LinkIcon(props: { url: string; img: string; alt: string }) {
-  return (
-    <Link
-      href={props.url}
-      className="hover:scale-110 active:scale-100 transition"
-      target="_blank"
-    >
-      <Image alt={props.alt} src={props.img} width={30} height={30} />
-    </Link>
-  );
-}
+export default Footer;
