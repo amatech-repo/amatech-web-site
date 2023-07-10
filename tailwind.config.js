@@ -25,6 +25,9 @@ module.exports = {
         gray: "#AAAAAA", // グレーテキスト
         white: colors.white,
       },
+      borderRadius: {
+        32: "32px",
+      },
     },
     fontFamily: {
       base: "YuGothic", // 游ゴシック
