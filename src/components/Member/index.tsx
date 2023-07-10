@@ -16,7 +16,7 @@ export const Member = (props: Props) => {
 
   return (
     <div className="font-YuGothic w-80 h-40 rounded-32 bg-white flex flex-row pl-11 pr-14 drop-shadow-lg">
-      <Image src={imagePath} alt="" width={95} height={95} className="pr-5 " />
+      <Image src={imagePath} alt="" width={95} height={1} className="pr-5 " />
       <div className="pt-8">
         <p className=" font-bold text-base">{name}</p>
 
