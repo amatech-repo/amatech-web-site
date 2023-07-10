@@ -16,7 +16,7 @@ type Members = {
 
 export const MemberList = ({ members }: Members) => {
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-12">
       {members.map((member, index) => (
         <Member
           key={index}
