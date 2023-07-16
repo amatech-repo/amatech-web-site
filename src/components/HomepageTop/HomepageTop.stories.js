@@ -17,5 +17,5 @@ export const Default = Template.bind({});
 Default.args = {
   imagePath1: "/logo/amatech.svg",
   imagePath2: "/icons/material-symbols_arrow-right-rounded.svg",
-  imagePath3: "/background/wave.svg",
+  imagePath3: "/background/Group 87.svg",
 };
