@@ -17,11 +17,6 @@ export const Footer = () => {
         <hr className="h-[3px] w-[140px] rounded-full border-0 bg-slate-200" />
         <div className="flex gap-6">
           <LinkIcon
-            url="https://twitter.com/amatech1006"
-            img="/icons/twitter.svg"
-            alt="Twitter"
-          />
-          <LinkIcon
             url="https://github.com/amatech-repo"
             img="/icons/github.svg"
             alt="GitHub"
@@ -30,6 +25,11 @@ export const Footer = () => {
             url="https://qiita.com/organizations/amatech"
             img="/icons/qiita.svg"
             alt="Qiita"
+          />
+          <LinkIcon
+            url="https://twitter.com/amatech1006"
+            img="/icons/x.svg"
+            alt="X"
           />
         </div>
       </div>
