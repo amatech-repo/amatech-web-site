@@ -13,12 +13,6 @@ export const Footer = () => {
           <Link href="/about" className="hover:underline">
             あまてくとは？
           </Link>
-          <Link href="/" className="hover:underline">
-            なんらかのリンク
-          </Link>
-          <Link href="/" className="hover:underline">
-            どこかへのリンク
-          </Link>
         </div>
         <hr className="h-[3px] w-[140px] rounded-full border-0 bg-slate-200" />
         <div className="flex gap-6">
@@ -26,11 +20,6 @@ export const Footer = () => {
             url="https://twitter.com/amatech1006"
             img="/icons/twitter.svg"
             alt="Twitter"
-          />
-          <LinkIcon
-            url="https://instagram.com/amatech1006"
-            img="/icons/instagram.svg"
-            alt="Instagram"
           />
           <LinkIcon
             url="https://github.com/amatech-repo"
