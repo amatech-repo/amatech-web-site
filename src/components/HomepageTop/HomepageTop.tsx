@@ -6,9 +6,9 @@ type Props = {
   imagePath3: string;
 };
 export const HomepageTop = ({ imagePath1, imagePath2, imagePath3 }: Props) => {
-  const text: string = "エンジニア\nコミュニティ";
+  const text: string = "エンジニアを目指すきっかけ　　　　";
   return (
-    <div>
+    <div className="">
       <Image
         src={imagePath3}
         alt=""
@@ -20,7 +20,7 @@ export const HomepageTop = ({ imagePath1, imagePath2, imagePath3 }: Props) => {
           objectFit: "cover",
         }}
       />
-      <div className="flex  ml-4">
+      <div className="flex  ml-4 container">
         <div className="blur-[0px]">
           <div className=" text-neutral-900 text-[40px] pt-[40px] font-extrabold font-concept tracking-widest">
             どうせやるなら、
@@ -31,25 +31,25 @@ export const HomepageTop = ({ imagePath1, imagePath2, imagePath3 }: Props) => {
             <span className="text-zinc-800 text-[14px] font-bold tracking-wide">
               あまてくは京都産業大学の学生を中心とした
             </span>
-            <span className="text-sky-400 text-[14px] font-bold tracking-wide">
-              {text}
+            <span className="text-sky-400 text-[14px] whitespace-pre-wrap font-bold tracking-wide">
+              エンジニア　　　　コミュニティ
             </span>
-            <span className="text-zinc-800 text-[14px] font-bold tracking-wide">
+            <span className="text-zinc-800 text-[14px] font-bold whitespace-pre-wrap tracking-wide">
               です。
               <br />
               <br />
-              勉強会やLT会など、授業で触れる以外のプログラミングや技術のキャッチアップだけでなく、ハッカソン出場やチームメンバーの育成など
+              勉強会やLT会など、授業で触れる以外のプログラミング　　　　や技術のキャッチアップだけでなく、ハッカソン出場や　　　　　　チームメンバーの育成など
             </span>
-            <span className="text-sky-400 text-[14px] font-bold tracking-wide">
-              エンジニアを目指すきっかけ
+            <span className="text-sky-400 text-[14px] font-bold whitespace-pre-wrap tracking-wide">
+              {text}
             </span>
-            <span className="text-zinc-800 text-[14px] font-bold tracking-wide">
+            <span className="text-zinc-800 text-[14px] font-bold  tracking-wide">
               になる活動を行なっています。
             </span>
           </div>
           <br />
-          <div className="flex ml-auto">
-            <div className="text-sky-400 text-base font-bold tracking-wide mt-2 ml-auto">
+          <div className="flex ml-40">
+            <div className="text-sky-400 text-base font-bold tracking-wide mt-2 ml-20">
               もっと詳しく
             </div>
             <Image
@@ -57,17 +57,19 @@ export const HomepageTop = ({ imagePath1, imagePath2, imagePath3 }: Props) => {
               alt=""
               width={42}
               height={42}
-              className="w-[42px] h-[42px] relative"
+              className="w-[42px] h-[42px]"
             />
           </div>
         </div>
-        <Image
-          src={imagePath1}
-          alt=""
-          width={674}
-          height={483}
-          className="w-[674px] h-[483px] pr-[200px] pb-[50px]"
-        />
+        <div className="w-[674px] h-[483px] pr-auto pb-[50px]">
+          <Image
+            src={imagePath1}
+            alt=""
+            width={674}
+            height={483}
+            className="w-[674px] h-[483px]"
+          />
+        </div>
       </div>
     </div>
   );
