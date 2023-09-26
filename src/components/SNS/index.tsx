@@ -1,27 +1,26 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
-  sns: string;
-  snsID?: string;
+  snsImagePath: string;
+  snsLink: string;
+  alt: string;
 };
 
 export const SNS = (props: Props) => {
-  const { sns, snsID } = props;
+  const { snsImagePath, snsLink, alt } = props;
 
   return (
     <>
-      {snsID ? (
-        <a href={"https://" + sns + ".com/" + snsID}>
-          <Image
-            src={"/icons/" + sns + ".svg"}
-            width={16}
-            height={16}
-            alt={sns + "のアイコン"}
-          />
-        </a>
-      ) : (
-        <></>
-      )}
+      <Link href={snsLink} className="inline-block">
+        <Image
+          src={snsImagePath}
+          width={197}
+          height={205}
+          alt={alt}
+          className="hover:translate-y-1  duration-300"
+        />
+      </Link>
     </>
   );
 };
