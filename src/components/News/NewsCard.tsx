@@ -13,7 +13,7 @@ type Props = {
 export const NewsCard = (props: Props) => {
   const { title, place, day, imageMaruPath, imageNewsPath, isRight } = props;
   return (
-    <div className="w-[732px] h-[202px] bg-sky-500">
+    <div className="w-[732px] h-[202px]">
       <div className="flex ">
         <Image
           src={imageMaruPath}
