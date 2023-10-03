@@ -12,13 +12,36 @@ export default {
 
 const newsListState = [
   {
-    imagePath: "/logo/vega.svg",
+    title: "関西ビギナーズハッカソン開催！",
+    place: "Tomosuba河原町店",
+    day: "2/28",
+    imageMaruPath: "/icons/DayMaru.svg",
+    imageNewsPath: "/icons/newsLeft.svg",
+    isRight: false,
   },
   {
-    imagePath: "/logo/techTrain.svg",
+    title: "関西ビギナーズハッカソン開催！",
+    place: "Tomosuba河原町店",
+    day: "2/28",
+    imageMaruPath: "/icons/DayMaru.svg",
+    imageNewsPath: "/icons/newsRight.svg",
+    isRight: true,
   },
   {
-    imagePath: "/logo/tomosube.svg",
+    title: "関西ビギナーズハッカソン開催！",
+    place: "Tomosuba河原町店",
+    day: "2/28",
+    imageMaruPath: "/icons/DayMaru.svg",
+    imageNewsPath: "/icons/newsLeft.svg",
+    isRight: false,
+  },
+  {
+    title: "関西ビギナーズハッカソン開催！",
+    place: "Tomosuba河原町店",
+    day: "2/28",
+    imageMaruPath: "/icons/DayMaru.svg",
+    imageNewsPath: "/icons/newsRight.svg",
+    isRight: true,
   },
 ];
 
@@ -38,5 +61,5 @@ const ListTemplate = (args) => <NewsList {...args} />;
 export const List = ListTemplate.bind({});
 
 List.args = {
-  newsList: newsListState,
+  newsCards: newsListState,
 };
