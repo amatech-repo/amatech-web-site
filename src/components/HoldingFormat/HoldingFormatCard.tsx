@@ -5,7 +5,7 @@ export const HoldingFormatCard = (props: HoldingFormat) => {
   const { discordLogo, holdingFormat, image, place, time } = props;
 
   return (
-    <div className="flex flex-col items-center justify-end w-full py-14 mx-auto rounded-3xl drop-shadow-lg">
+    <div className="flex flex-col items-center justify-end w-full py-14 mx-auto rounded-3xl drop-shadow-lg bg-white">
       <div className="mb-16">
         <Image src={image} alt="対面" width={125} height={1} />
       </div>
