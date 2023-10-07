@@ -8,7 +8,7 @@ type MemberListProps = {
 
 export const MemberList = ({ members }: MemberListProps) => {
   return (
-    <div className="flex space-x-12">
+    <div className="flex flex-col items-center space-y-12 sm:flex-row sm:space-y-0 sm:space-x-12">
       {members?.contents.map((member: MembersType, index: number) => (
         <Member
           key={index}
