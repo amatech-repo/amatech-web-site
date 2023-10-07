@@ -1,9 +1,5 @@
-import {
-  createClient,
-  MicroCMSQueries,
-  MicroCMSImage,
-  MicroCMSDate,
-} from "microcms-js-sdk";
+import { log } from "console";
+import { createClient } from "microcms-js-sdk";
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error("Missing env MICROCMS_SERVICE_DOMAIN");
