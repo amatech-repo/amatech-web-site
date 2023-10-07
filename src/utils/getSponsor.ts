@@ -1,9 +1,9 @@
+import { SponsorListType } from "@/types/sponsor";
 import { client } from "@/utils/client";
-import { MicroCMSQueries } from "microcms-js-sdk";
 
-// ニュース一覧を取得
+// スポンサー一覧を取得
 export const getSponsorList = async () => {
-  const sponsorData = await client.getList<any>({
+  const sponsorData = await client.getList<SponsorListType>({
     endpoint: "sponsor",
   });
 

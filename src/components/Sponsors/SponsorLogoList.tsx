@@ -1,19 +1,19 @@
 // Sponsors.tsx
+import { SponsorListType } from "@/types/sponsor";
 import { SponsorLogo } from "./SponsorLogo";
 
-type SponsorLogo = {
-  imagePath: string;
+type SponsorListProps = {
+  sponsors: SponsorListType | undefined;
 };
 
-type Sponsors = {
-  sponsors: SponsorLogo[];
-};
-
-export const SponsorLogoList = ({ sponsors }: Sponsors) => {
+export const SponsorLogoList = ({ sponsors }: SponsorListProps) => {
   return (
     <div className="flex gap-[42px]">
-      {sponsors.map((sponsor, index) => (
-        <SponsorLogo key={index} imagePath={sponsor.imagePath} />
+      {sponsors?.contents.map((sponsor, index) => (
+        <SponsorLogo
+          key={index}
+          ImagePath={sponsor.url?.url ? sponsor.url.url : undefined}
+        />
       ))}
     </div>
   );

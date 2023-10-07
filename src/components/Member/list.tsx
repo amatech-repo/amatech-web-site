@@ -7,9 +7,6 @@ type MemberListProps = {
 };
 
 export const MemberList = ({ members }: MemberListProps) => {
-  console.log("members", members);
-  // console.log("ImagePath", members.contents.ImagePath);
-
   return (
     <div className="flex space-x-12">
       {members?.contents.map((member: MembersType, index: number) => (
