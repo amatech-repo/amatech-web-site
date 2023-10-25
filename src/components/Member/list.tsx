@@ -1,34 +1,27 @@
+import { Key } from "react";
 import { Member } from "./index";
+import { MembersType, MembersListType } from "@/types/member";
 
-type Member = {
-  imagePath: string;
-  name: string;
-  role?: string;
-  grade: string;
-  twitter?: string;
-  instagram?: string;
-  github?: string;
+type MemberListProps = {
+  members: MembersListType | undefined;
 };
 
-type Members = {
-  members: Member[];
-};
-
-export const MemberList = ({ members }: Members) => {
+export const MemberList = ({ members }: MemberListProps) => {
   return (
-    <div className="flex space-x-12">
-      {members.map((member, index) => (
-        <Member
-          key={index}
-          imagePath={member.imagePath}
-          name={member.name}
-          grade={member.grade}
-          role={member.role}
-          github={member.github}
-          twitter={""}
-          instagram={""}
-        />
-      ))}
+    <div className="flex flex-col items-center space-y-12 sm:flex-row sm:space-y-0 sm:space-x-12">
+      {members &&
+        members?.contents.map((member: MembersType, index: number) => (
+          <Member
+            key={index}
+            imageUrl={member.imageUrl ? member.imageUrl.url : ""}
+            name={member.name}
+            grade={member.age.join(", ")}
+            role={member.role.join(", ")}
+            github={member.github}
+            twitter={""}
+            instagram={""}
+          />
+        ))}
     </div>
   );
 };

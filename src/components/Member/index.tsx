@@ -1,22 +1,22 @@
 import Image from "next/image";
 import { SNS } from "../SNS";
 
-type Props = {
-  imagePath: string;
+interface Props {
+  imageUrl: string;
   name: string;
-  role?: string;
   grade: string;
-  twitter?: string;
-  instagram?: string;
-  github?: string;
-};
+  role: string;
+  github: string;
+  twitter: string;
+  instagram: string;
+}
 
 export const Member = (props: Props) => {
-  const { imagePath, name, role, grade, twitter, instagram, github } = props;
+  const { imageUrl, name, grade, role, github, twitter, instagram } = props;
 
   return (
     <div className="font-YuGothic w-80 h-40 rounded-32 bg-white flex flex-row pl-11 pr-14 drop-shadow-lg">
-      <Image src={imagePath} alt="" width={95} height={1} className="pr-5 " />
+      <Image src={imageUrl} alt="" width={95} height={1} className="pr-5 " />
       <div className="pt-8">
         <p className=" font-bold text-base">{name}</p>
 
