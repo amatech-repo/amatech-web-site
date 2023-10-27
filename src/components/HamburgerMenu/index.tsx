@@ -19,26 +19,67 @@ export const HamburgerMenu = () => {
           </Link>
         </li>
 
-        <div className="flex justify-end items-center ml-auto space-x-10">
-          <button
-            onClick={toggleMenu}
-            className="md:hidden flex items-center px-3 py-2 border rounded"
-          >
-            <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0zm0 6h20v2H0zm0 6h20v2H0z" />
-            </svg>
+        <div className="relative flex justify-end items-center ml-auto space-x-10">
+          <button onClick={toggleMenu} className="focus:outline-none">
+            <Image
+              src="/icons/hamburger.svg"
+              alt="Menu"
+              width={32}
+              height={32}
+            />
           </button>
 
-          <div
-            className={`md:flex items-center ${isOpen ? "block" : "hidden"}`}
-          >
-            <Link href="/news">ニュース</Link>
-          </div>
+          {isOpen && (
+            <div className="absolute top-[-10px] left-[-200px] bg-white border rounded-lg p-4 w-[200px] shadow-lg">
+              <ul className="space-y-3">
+                <li>
+                  <Image
+                    src="/icons/home.svg"
+                    alt="ホーム"
+                    width={24}
+                    height={24}
+                  />
+                  <Link href="/">ホーム</Link>
+                </li>
+                <li>
+                  <Image
+                    src="/icons/heart.svg"
+                    alt="スポンサー"
+                    width={24}
+                    height={24}
+                  />
+                  <Link href="/sponsor">スポンサー</Link>
+                </li>
+                <li>
+                  <Image
+                    src="/icons/user.svg"
+                    alt="運営メンバー"
+                    width={24}
+                    height={24}
+                  />
+                  <Link href="/member">運営メンバー</Link>
+                </li>
+                <li>
+                  <Image
+                    src="/icons/faq.svg"
+                    alt="FAQ"
+                    width={24}
+                    height={24}
+                  />
+                  <Link href="/faq">FAQ</Link>
+                </li>
+                <li>
+                  <Image
+                    src="/icons/contact.svg"
+                    alt="お問い合わせ"
+                    width={24}
+                    height={24}
+                  />
+                  <Link href="/contact">お問い合わせ</Link>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </ul>
     </nav>
