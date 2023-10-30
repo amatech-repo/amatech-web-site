@@ -1,32 +1,25 @@
-import React from "react";
+import React, { Key } from "react";
 import { NewsCard } from "./NewsCard";
 import Image from "next/image";
-type NewsCard = {
-  title: string;
-  place: string;
-  day: string;
-  imageMaruPath: string;
-  imageNewsPath: string;
-  isRight: boolean;
+import { NewsListType, NewsType } from "@/types/news";
+
+type NewsCardListProps = {
+  newsCards: NewsListType | undefined;
 };
 
-type NewsCards = {
-  newsCards: NewsCard[];
-};
-
-export const NewsList = ({ newsCards }: NewsCards) => {
+export const NewsList = ({ newsCards }: NewsCardListProps) => {
+  const contetns = newsCards?.contents ?? [];
   return (
     <div className="w-[732px] h-[1295.99px] relative">
       <div className="absolute z-[1]">
-        {newsCards.map((newsCard, index) => (
+        {contetns.map((newsCard: NewsType, index: Key) => (
           <NewsCard
             key={index}
             title={newsCard.title}
             place={newsCard.place}
-            day={newsCard.day}
-            imageMaruPath={newsCard.imageMaruPath}
-            imageNewsPath={newsCard.imageNewsPath}
-            isRight={newsCard.isRight}
+            eventDate={newsCard.eventDate}
+            imageNewsPath={""}
+            isRight={false}
           />
         ))}
       </div>

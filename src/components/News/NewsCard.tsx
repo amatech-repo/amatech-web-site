@@ -1,24 +1,25 @@
 import React from "react";
 import Image from "next/image";
 
-type Props = {
+interface Props {
   title: string;
   place: string;
-  day: string;
-  imageMaruPath: string;
+  eventDate: string;
   imageNewsPath: string;
   isRight: boolean;
-};
+}
 
 export const NewsCard = (props: Props) => {
-  const { title, place, day, imageMaruPath, imageNewsPath, isRight } = props;
+  const { title, place, eventDate, imageNewsPath, isRight } = props;
+  const day = eventDate.split("T")[0].split("-").slice(1).join("/");
+
   return (
     <>
       {isRight ? (
         <div className="w-[732px] h-[202px] my-[76px]">
           <div className="flex ">
             <Image
-              src={imageMaruPath}
+              src={"./images/dot.svg"}
               alt=""
               width={28}
               height={29}
@@ -32,8 +33,8 @@ export const NewsCard = (props: Props) => {
             <Image
               src={imageNewsPath}
               alt=""
-              width={732}
-              height={183}
+              width={200}
+              height={200}
               className="absolute"
             ></Image>
             <div className="absolute ml-[321px] mt-[68.99px]">
@@ -49,7 +50,7 @@ export const NewsCard = (props: Props) => {
               {day}
             </div>
             <Image
-              src={imageMaruPath}
+              src={"./images/dot.svg"}
               alt=""
               width={28}
               height={29}
