@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export const Top = () => {
   return (
-    <div className="flex items-center space-x-10">
-      <div>
+    <div className="flex flex-col items-center space-x-10 lg:flex-row">
+      <div className="mt-[5rem]">
         <div className="text-neutral-900 text-[50px] font-extrabold font-['YuMincho'] tracking-widest">
           どうせやるなら、
           <br />
           強くなろう。
         </div>
-        <div className="w-96 py-10">
-          <div>
+        <div className="w-[27rem] py-10 text-lg">
+          <div className="pb-5">
             あまてくは京都産業大学の学生を中心とした
             <span className="text-amatech-log">エンジニアコミュニティ</span>
             です。
