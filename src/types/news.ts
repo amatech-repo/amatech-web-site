@@ -8,7 +8,7 @@ export type NewsType = {
   body: string;
   place: string;
   eventDate: string;
-  image: NewsURLType;
+  imageURL: NewsURLType;
 };
 
 export type NewsURLType = {
