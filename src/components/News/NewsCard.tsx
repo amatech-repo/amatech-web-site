@@ -13,8 +13,8 @@ export const NewsCard = (props: Props) => {
 
   return (
     <>
-      <div className="w-5/6 mt-4 mb-8">
-        <div className="flex flex-row shadow-lg rounded-md  border-spacing-1 border-black bg-slate-50">
+      <div className="w-5/6 mt-4 mb-8 ">
+        <div className="flex flex-col sm:flex-row sm: pb-10 shadow-lg rounded-md  border-spacing-1 border-black bg-slate-50">
           <Image src={imageURL} alt="" width={245} height={150}></Image>
           <div className="ml-6 mt-3">
             <div className="text-2xl font-bold mb-2">{title}</div>

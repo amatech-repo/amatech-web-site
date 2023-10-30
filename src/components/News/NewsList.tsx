@@ -10,7 +10,7 @@ type NewsCardListProps = {
 export const NewsList = ({ newsCards }: NewsCardListProps) => {
   const contetns = newsCards?.contents ?? [];
   return (
-    <div className=" w-full h-[40rem] my-10">
+    <div className=" w-full h-[50rem] my-10">
       <div className="absolute">
         {contetns.map((newsCard: NewsType, index: Key) => (
           <>
