@@ -30,7 +30,7 @@ export const HamburgerMenu = () => {
           </button>
 
           {isOpen && (
-            <div className="absolute top-full right-0 mt-2 bg-white border rounded-lg p-4 w-[200px] shadow-lg z-99999">
+            <div className="absolute top-full right-0 mt-2 bg-white border rounded-lg p-4 w-[200px] shadow-lg">
               <ul className="space-y-3">
                 <li className="flex items-center space-x-2">
                   <Image
