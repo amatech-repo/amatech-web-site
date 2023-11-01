@@ -10,6 +10,7 @@ import { MemberList } from "@/components/Member/list";
 
 import { MembersType, MembersListType } from "@/types/member";
 import { SponsorLogoList } from "@/components/Sponsors/SponsorLogoList";
+import { Top } from "@/components/Top";
 
 export default async function Home() {
   const admin = await getAdminList();
@@ -24,6 +25,9 @@ export default async function Home() {
 
   return (
     <main>
+      <section className="mt-full">
+        <Top />
+      </section>
       <section className="mt-20">
         <HoldingFormat />
       </section>
