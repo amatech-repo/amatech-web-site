@@ -21,9 +21,9 @@ export const SectionTitle = (props: Props) => {
       <Image
         src={`./background/sections/${image}`}
         alt=""
-        width={1}
-        height={1}
-        className="w-1/6 z-10"
+        width={288}
+        height={288}
+        className="z-10"
       />
       <div className="text-title absolute z-20 text-center w-full">
         <div className="text-5xl font-bold">{title}</div>
