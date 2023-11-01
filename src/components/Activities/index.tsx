@@ -22,7 +22,7 @@ export const Activity = (props: Props) => {
         <div className="sm:hidden">
           <Image
             className="w-44 h-44"
-            src="./icons/memo.svg"
+            src={imagePath}
             alt=""
             width={180}
             height={180}
