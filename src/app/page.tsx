@@ -30,6 +30,11 @@ export default async function Home() {
         <Top />
       </section>
       <section className="mt-20">
+        <SectionTitle
+          title={"Holding Format"}
+          subtitle={"開催形式"}
+          image={ImageSize.small}
+        />
         <HoldingFormat />
       </section>
       <section className="mt-20">
