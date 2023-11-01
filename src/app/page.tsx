@@ -11,7 +11,7 @@ import { MemberList } from "@/components/Member/list";
 import { MembersType, MembersListType } from "@/types/member";
 import { SponsorLogoList } from "@/components/Sponsors/SponsorLogoList";
 import { Top } from "@/components/Top";
-import { Activity } from "@/components/Activities";
+import { ActivityList } from "@/components/Activities/list";
 
 export default async function Home() {
   const admin = await getAdminList();
@@ -39,7 +39,7 @@ export default async function Home() {
         <SponsorLogoList sponsors={sponsors ? sponsors : undefined} />
       </section>
       <section className="mt-20">
-        <Activity />
+        <ActivityList />
       </section>
     </main>
   );
