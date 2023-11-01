@@ -54,10 +54,10 @@ export default async function Home() {
       <section className="mt-20">
         <MemberList members={admin ? admin : undefined} />
       </section>
-      <section className="mt-20 mb-10">
+      <section className="mt-20">
         <SponsorLogoList sponsors={sponsors ? sponsors : undefined} />
       </section>
-      <section className="mt-20">
+      <section className="mt-10 mx-10">
         <FAQList faqs={faqs} />
       </section>
     </main>
