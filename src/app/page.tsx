@@ -37,7 +37,7 @@ export default async function Home() {
   const sponsors = await getSponsorList();
 
   return (
-    <main>
+    <>
       <section className="mt-full">
         <Top />
       </section>
@@ -71,9 +71,10 @@ export default async function Home() {
       </section>
       <section className="mt-20 mb-10">
         <ActivityList />
+      </section>
       <section className="mt-10 mx-10">
         <FAQList faqs={faqs} />
       </section>
-    </main>
+    </>
   );
 }
