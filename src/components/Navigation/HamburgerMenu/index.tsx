@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { LinkItem } from "..";
 
 export const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,51 +33,11 @@ export const HamburgerMenu = () => {
           {isOpen && (
             <div className="absolute top-full right-0 mt-2 bg-white border rounded-lg p-4 w-[200px] shadow-lg">
               <ul className="space-y-3">
-                <li className="flex items-center space-x-2">
-                  <Image
-                    src="/icons/news.svg"
-                    alt="ニュース"
-                    width={24}
-                    height={24}
-                  />
-                  <Link href="/">ニュース</Link>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <Image
-                    src="/icons/sponsor.svg"
-                    alt="スポンサー"
-                    width={20}
-                    height={20}
-                  />
-                  <Link href="/sponsor">開催形式</Link>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <Image
-                    src="/icons/member.svg"
-                    alt="運営メンバー"
-                    width={24}
-                    height={24}
-                  />
-                  <Link href="/member">活動内容</Link>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <Image
-                    src="/icons/faq.svg"
-                    alt="FAQ"
-                    width={24}
-                    height={24}
-                  />
-                  <Link href="/faq">FAQ</Link>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <Image
-                    src="/icons/contact.svg"
-                    alt="お問い合わせ"
-                    width={24}
-                    height={24}
-                  />
-                  <Link href="/contact">SNS</Link>
-                </li>
+                <LinkItem href={"/icons/news.svg"} text={"ニュース"} />
+                <LinkItem href={"/icons/sponsor.svg"} text={"開催形式"} />
+                <LinkItem href={"/icons/member.svg"} text={"活動内容"} />
+                <LinkItem href={"/icons/faq.svg"} text={"FAQ"} />
+                <LinkItem href={"/icons/contact.svg"} text={"SNS"} />
               </ul>
             </div>
           )}
