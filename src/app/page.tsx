@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 import { getAdminList } from "@/utils/getAdmin";
 import { getNewsList } from "@/utils/getNews";
 import { getSponsorList } from "@/utils/getSponsor";
@@ -10,6 +6,7 @@ import { MemberList } from "@/components/Member/list";
 import { SponsorLogoList } from "@/components/Sponsors/SponsorLogoList";
 import { NewsList } from "@/components/News/NewsList";
 import { Top } from "@/components/Top";
+import { ActivityList } from "@/components/Activities/list";
 import { ImageSize, SectionTitle } from "@/components/SectionTitle";
 import { FAQList } from "@/components/FAQcomponents/FAQList";
 import { SNSCardList } from "@/components/SNSCard/list";
@@ -38,14 +35,8 @@ export default async function Home() {
   const news = await getNewsList();
   const sponsors = await getSponsorList();
 
-  // TODO: 型指定をする
-  // console.log('member', member);
-  console.log("########### news ########", news);
-  console.log("######## sponsor ########", sponsors);
-  // console.log("########### admin ########", admin);
-
   return (
-    <main>
+    <>
       <section className="mt-full">
         <Top />
       </section>
@@ -77,6 +68,9 @@ export default async function Home() {
         {/* @ts-ignore */}
         <SponsorLogoList sponsors={sponsors ? sponsors : undefined} />
       </section>
+      <section className="mt-20 mb-10">
+        <ActivityList />
+      </section>
       <section className="mt-10 mx-10">
         <FAQList faqs={faqs} />
       </section>
@@ -84,5 +78,6 @@ export default async function Home() {
         <SNSCardList />
       </section>
     </main>
+    </>
   );
 }
