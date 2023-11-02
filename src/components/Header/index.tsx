@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { Navigation } from "../Navigation";
+import { HamburgerMenu } from "../Navigation/HamburgerMenu";
 
 export const Header = () => {
   return (
-    <header className="bg-red-100 p-10">
-      <h1 className="">Header</h1>
-      <Navigation />
+    <header className="bg-white py-5 px-9 w-10/12	h-16 rounded-3xl drop-shadow-md mx-auto relative z-10">
+      <div className="lg:hidden">
+        <HamburgerMenu /> {/* スマホサイズで表示 */}
+      </div>
+      <div className="hidden lg:block">
+        <Navigation /> {/* それ以外のサイズで表示 */}
+      </div>
     </header>
   );
 };
