@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Navigation } from "../Navigation";
-import { HamburgerMenu } from "../HamburgerMenu";
+import { HamburgerMenu } from "../Navigation/HamburgerMenu";
 
 export const Header = () => {
   return (
