@@ -1,29 +1,23 @@
+import { Key } from "react";
 import { Member } from "./index";
+import { MembersType, MembersListType } from "@/types/member";
 
-type Member = {
-  imagePath: string;
-  name: string;
-  role?: string;
-  grade: string;
-  twitter?: string;
-  instagram?: string;
-  github?: string;
+type MemberListProps = {
+  members: MembersListType | undefined;
 };
 
-type Members = {
-  members: Member[];
-};
-
-export const MemberList = ({ members }: Members) => {
+export const MemberList = ({ members }: MemberListProps) => {
+  // members.contentsがundefinedの場合は空の配列を返す
+  const contents = members?.contents ?? [];
   return (
-    <div className="flex space-x-12">
-      {members.map((member, index) => (
+    <div className="flex flex-col items-center space-y-12 sm:flex-row sm:space-y-0 sm:space-x-12">
+      {contents.map((member: MembersType, index: Key) => (
         <Member
           key={index}
-          imagePath={member.imagePath}
+          imageUrl={member.imageUrl ? member.imageUrl.url : ""}
           name={member.name}
-          grade={member.grade}
-          role={member.role}
+          grade={member.age.join(", ")}
+          role={member.role.join(", ")}
           github={member.github}
           twitter={""}
           instagram={""}
