@@ -12,7 +12,7 @@ type FAQs = {
 
 export const FAQList = ({ faqs }: FAQs) => {
   return (
-    <div className="w-[1001px] h-[998px]">
+    <div className="w-full flex flex-col justify-center mx-3">
       {faqs.map((faq, index) => (
         <FAQ key={index} imagePath={faq.imagePath} isRight={faq.isRight} />
       ))}
