@@ -7,13 +7,12 @@ import { getNewsList } from "@/utils/getNews";
 import { getSponsorList } from "@/utils/getSponsor";
 import { HoldingFormat } from "@/components/HoldingFormat";
 import { MemberList } from "@/components/Member/list";
-
-import { MembersType, MembersListType } from "@/types/member";
 import { SponsorLogoList } from "@/components/Sponsors/SponsorLogoList";
 import { NewsList } from "@/components/News/NewsList";
 import { Top } from "@/components/Top";
 import { ImageSize, SectionTitle } from "@/components/SectionTitle";
 import { FAQList } from "@/components/FAQcomponents/FAQList";
+import { SNSCardList } from "@/components/SNSCard/list";
 
 const faqs = [
   {
@@ -80,6 +79,9 @@ export default async function Home() {
       </section>
       <section className="mt-10 mx-10">
         <FAQList faqs={faqs} />
+      </section>
+      <section>
+        <SNSCardList />
       </section>
     </main>
   );
