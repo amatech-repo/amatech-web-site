@@ -54,6 +54,7 @@ export default async function Home() {
           title={"Admin"}
           subtitle={"運営メンバー"}
           image={ImageSize.small}
+          e
         />
         <MemberList members={admin ? admin : undefined} />
       </section>
