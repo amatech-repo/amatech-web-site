@@ -10,6 +10,7 @@ import { MemberList } from "@/components/Member/list";
 
 import { MembersType, MembersListType } from "@/types/member";
 import { SponsorLogoList } from "@/components/Sponsors/SponsorLogoList";
+import { NewsList } from "@/components/News/NewsList";
 import { Top } from "@/components/Top";
 import { FAQList } from "@/components/FAQcomponents/FAQList";
 
@@ -39,7 +40,7 @@ export default async function Home() {
 
   // TODO: 型指定をする
   // console.log('member', member);
-  // console.log('########### news ########', news);
+  console.log("########### news ########", news);
   console.log("######## sponsor ########", sponsors);
   // console.log("########### admin ########", admin);
 
@@ -53,6 +54,9 @@ export default async function Home() {
       </section>
       <section className="mt-20">
         <MemberList members={admin ? admin : undefined} />
+      </section>
+      <section>
+        <NewsList newsCards={news ? news : undefined}></NewsList>
       </section>
       <section className="mt-20 mb-10">
         {/* @ts-ignore */}
