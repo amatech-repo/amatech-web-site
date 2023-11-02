@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export const Top = () => {
   return (
-    <div className="flex flex-col items-center space-x-10 lg:flex-row">
-      <div className="mt-[5rem]">
-        <div className="text-neutral-900 text-[50px] font-extrabold font-['YuMincho'] tracking-widest">
+    <div className="flex flex-col justify-center items-center space-x-10 lg:flex-row min-w-fit">
+      <div className="mt-[5rem] max-w-full space-x-4">
+        <div className="w-[27rem] text-neutral-900 text-5xl font-extrabold ">
           どうせやるなら、
           <br />
           強くなろう。

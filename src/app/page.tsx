@@ -11,6 +11,26 @@ import { MemberList } from "@/components/Member/list";
 import { MembersType, MembersListType } from "@/types/member";
 import { SponsorLogoList } from "@/components/Sponsors/SponsorLogoList";
 import { Top } from "@/components/Top";
+import { FAQList } from "@/components/FAQcomponents/FAQList";
+
+const faqs = [
+  {
+    imagePath: "./images/FAQ1.svg",
+    isRight: false,
+  },
+  {
+    imagePath: "./images/FAQ2.svg",
+    isRight: true,
+  },
+  {
+    imagePath: "./images/FAQ3.svg",
+    isRight: false,
+  },
+  {
+    imagePath: "./images/FAQ4.svg",
+    isRight: true,
+  },
+];
 
 export default async function Home() {
   const admin = await getAdminList();
@@ -37,6 +57,9 @@ export default async function Home() {
       <section className="mt-20 mb-10">
         {/* @ts-ignore */}
         <SponsorLogoList sponsors={sponsors ? sponsors : undefined} />
+      </section>
+      <section className="mt-10 mx-10">
+        <FAQList faqs={faqs} />
       </section>
     </main>
   );
