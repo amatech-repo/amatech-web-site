@@ -13,6 +13,7 @@ import { SponsorLogoList } from "@/components/Sponsors/SponsorLogoList";
 import { NewsList } from "@/components/News/NewsList";
 import { Top } from "@/components/Top";
 import { ActivityList } from "@/components/Activities/list";
+import { ImageSize, SectionTitle } from "@/components/SectionTitle";
 import { FAQList } from "@/components/FAQcomponents/FAQList";
 
 const faqs = [
@@ -51,15 +52,30 @@ export default async function Home() {
         <Top />
       </section>
       <section className="mt-20">
+        <SectionTitle
+          title={"Holding Format"}
+          subtitle={"開催形式"}
+          image={ImageSize.small}
+        />
         <HoldingFormat />
       </section>
       <section className="mt-20">
+        <SectionTitle
+          title={"Admin"}
+          subtitle={"運営メンバー"}
+          image={ImageSize.small}
+        />
         <MemberList members={admin ? admin : undefined} />
       </section>
       <section>
         <NewsList newsCards={news ? news : undefined}></NewsList>
       </section>
       <section className="mt-20 mb-10">
+        <SectionTitle
+          title={"Sponsors"}
+          subtitle={"協賛・スポンサー企業"}
+          image={ImageSize.small}
+        />
         {/* @ts-ignore */}
         <SponsorLogoList sponsors={sponsors ? sponsors : undefined} />
       </section>
