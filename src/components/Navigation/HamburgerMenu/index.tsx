@@ -48,7 +48,7 @@ export const HamburgerMenu = () => {
                     width={20}
                     height={20}
                   />
-                  <Link href="/sponsor">スポンサー</Link>
+                  <Link href="/sponsor">開催形式</Link>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Image
@@ -57,7 +57,7 @@ export const HamburgerMenu = () => {
                     width={24}
                     height={24}
                   />
-                  <Link href="/member">運営メンバー</Link>
+                  <Link href="/member">活動内容</Link>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Image
@@ -75,7 +75,7 @@ export const HamburgerMenu = () => {
                     width={24}
                     height={24}
                   />
-                  <Link href="/contact">お問い合わせ</Link>
+                  <Link href="/contact">SNS</Link>
                 </li>
               </ul>
             </div>

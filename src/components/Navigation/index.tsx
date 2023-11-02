@@ -17,11 +17,11 @@ export const Navigation = () => {
           </li>
           <li className="flex flex-row space-x-2">
             <Image src={"/icons/sponsor.svg"} alt={""} width={24} height={24} />
-            <Link href="/sponsor">スポンサー</Link>
+            <Link href="/sponsor">開催形式</Link>
           </li>
           <li className="flex flex-row space-x-2">
             <Image src={"/icons/member.svg"} alt={""} width={24} height={24} />
-            <Link href="/member">運営メンバー</Link>
+            <Link href="/member">活動内容</Link>
           </li>
           <li className="flex flex-row space-x-2">
             <Image src={"/icons/faq.svg"} alt={""} width={24} height={24} />
@@ -29,7 +29,7 @@ export const Navigation = () => {
           </li>
           <li className="flex flex-row space-x-2">
             <Image src={"/icons/contact.svg"} alt={""} width={24} height={24} />
-            <Link href="/contact">お問い合わせ</Link>
+            <Link href="/contact">SNS</Link>
           </li>
         </div>
       </ul>
