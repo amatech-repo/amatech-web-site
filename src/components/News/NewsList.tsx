@@ -8,7 +8,7 @@ type NewsCardListProps = {
 };
 
 export const NewsList = ({ newsCards }: NewsCardListProps) => {
-  const contents = newsCards?.contents && [];
+  const contents = newsCards?.contents ?? [];
   return (
     <div className=" w-full h-[50rem] my-10">
       <div className="absolute">
