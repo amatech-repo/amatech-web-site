@@ -35,6 +35,7 @@ export default async function Home() {
         <MemberList members={admin ? admin : undefined} />
       </section>
       <section className="mt-20 mb-10">
+        {/* @ts-ignore */}
         <SponsorLogoList sponsors={sponsors ? sponsors : undefined} />
       </section>
     </main>
