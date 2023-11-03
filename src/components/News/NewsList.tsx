@@ -1,4 +1,3 @@
-import React from "react";
 import { NewsCard } from "./NewsCard";
 import Image from "next/image";
 import { NewsListType, NewsType } from "@/types/news";
