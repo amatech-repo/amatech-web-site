@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export const Top = () => {
   return (
-    <div className="flex flex-col justify-center items-center space-x-10 lg:flex-row min-w-fit">
-      <div className="mt-[5rem] max-w-full space-x-4">
-        <div className="w-[27rem] text-neutral-900 text-5xl font-extrabold ">
+    <div className="flex flex-col justify-center items-center space-y-10 lg:space-x-10 lg:flex-row">
+      <div className="mt-[5rem] max-w-full space-x-4 mx-4 lg:mx-0">
+        <div className="max-w-[27rem] text-neutral-900 sm:text-5xl font-extrabold text-4xl">
           どうせやるなら、
           <br />
           強くなろう。
         </div>
-        <div className="w-[27rem] py-10 text-lg">
+        <div className="max-w-[27rem] py-10 text-lg">
           <div className="pb-5">
             あまてくは京都産業大学の学生を中心とした
             <span className="text-amatech-log">エンジニアコミュニティ</span>

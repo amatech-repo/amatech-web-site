@@ -13,11 +13,11 @@ export const NewsCard = (props: Props) => {
 
   return (
     <div
-      className={`w-5/6 mt-4 mb-8 ${
+      className={`w-5/6 mt-4 mb-8  ${
         isRight ? "md:flex-row-reverse" : "md:flex-row"
       } flex flex-col md:flex-row bg-news-background rounded-3xl shadow-lg overflow-hidden`}
     >
-      <div className="relative w-full md:w-1/3 mb-4 md:mb-0">
+      <div className="relative w-full md:w-1/3 mb-4 md:mb-0 mx-auto">
         <Image
           src={imageURL}
           width={245}
