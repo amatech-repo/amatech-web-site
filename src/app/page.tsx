@@ -80,7 +80,6 @@ export default async function Home() {
             subtitle={"活動内容"}
             image={ImageSize.small}
           />
-
           <ActivityList />
         </section>
         <section className="mt-24">
@@ -90,6 +89,14 @@ export default async function Home() {
             image={ImageSize.small}
           />
           <FAQList faqs={faqs} />
+        </section>
+        <section className="mt-24">
+          <SectionTitle
+            title={"SNS"}
+            subtitle={"公式SNS"}
+            image={ImageSize.small}
+          />
+          <SNSCardList />
         </section>
       </div>
     </>
