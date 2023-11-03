@@ -1,4 +1,5 @@
-import { Key } from "react";
+"use client";
+import { useState, useEffect } from "react";
 import { Member } from "./index";
 import { MembersType, MembersListType } from "@/types/member";
 
@@ -7,17 +8,42 @@ type MemberListProps = {
 };
 
 export const MemberList = ({ members }: MemberListProps) => {
-  const contents = members?.contents ?? [];
+  const [displayMembers, setDisplayMembers] = useState<MembersType[]>(
+    members?.contents || []
+  );
 
-  // メンバーリストを2つに分割
-  const halfLength = Math.ceil(contents.length / 2);
-  const firstHalf = contents.slice(0, halfLength);
-  const secondHalf = contents.slice(halfLength);
+  useEffect(() => {
+    const handleScroll = (e: any) => {
+      const scrollWidth = e.target.scrollWidth;
+      const scrollLeft = e.target.scrollLeft;
+      const clientWidth = e.target.clientWidth;
+
+      // スクロール位置が右端に達した場合
+      if (scrollLeft + clientWidth >= scrollWidth - 100) {
+        // 既存のデータを再度追加
+        setDisplayMembers([...displayMembers, ...(members?.contents || [])]);
+      }
+    };
+
+    document
+      .querySelector(".overflow-x-auto")
+      ?.addEventListener("scroll", handleScroll);
+
+    return () =>
+      document
+        .querySelector(".overflow-x-auto")
+        ?.removeEventListener("scroll", handleScroll);
+  }, [displayMembers]);
+
+  // 同様に2分割するロジックはそのまま
+  const halfLength = Math.ceil(displayMembers.length / 2);
+  const firstHalf = displayMembers.slice(0, halfLength);
+  const secondHalf = displayMembers.slice(halfLength);
 
   return (
     <div className="overflow-x-auto p-6">
       <div className="flex space-x-8">
-        {firstHalf.map((member: MembersType, index: Key) => (
+        {firstHalf.map((member, index) => (
           <div key={index} className="min-w-max">
             <Member
               imageUrl={member.imageUrl ? member.imageUrl.url : ""}
@@ -32,9 +58,7 @@ export const MemberList = ({ members }: MemberListProps) => {
         ))}
       </div>
       <div className="flex space-x-8 ml-40 mt-4">
-        {" "}
-        {/* ml-4は左のオフセットで、2行目のカードの中央が1行目のカード間にくるように調整します */}
-        {secondHalf.map((member: MembersType, index: Key) => (
+        {secondHalf.map((member, index) => (
           <div key={Number(index) + halfLength} className="min-w-max">
             <Member
               imageUrl={member.imageUrl ? member.imageUrl.url : ""}
