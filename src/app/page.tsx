@@ -3,14 +3,13 @@ import { getNewsList } from "@/utils/getNews";
 import { getSponsorList } from "@/utils/getSponsor";
 import { HoldingFormat } from "@/components/HoldingFormat";
 import { MemberList } from "@/components/Member/list";
-
-import { MembersType, MembersListType } from "@/types/member";
 import { SponsorLogoList } from "@/components/Sponsors/SponsorLogoList";
 import { NewsList } from "@/components/News/NewsList";
 import { Top } from "@/components/Top";
 import { ActivityList } from "@/components/Activities/list";
 import { ImageSize, SectionTitle } from "@/components/SectionTitle";
 import { FAQList } from "@/components/FAQcomponents/FAQList";
+import { SNSCardList } from "@/components/SNSCard/list";
 
 const faqs = [
   {
@@ -92,6 +91,14 @@ export default async function Home() {
               image={ImageSize.small}
             />
             <FAQList faqs={faqs} />
+          </section>
+          <section className="mt-24">
+            <SectionTitle
+              title={"SNS"}
+              subtitle={"公式SNS"}
+              image={ImageSize.small}
+            />
+            <SNSCardList />
           </section>
         </div>
       </div>
