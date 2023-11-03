@@ -8,6 +8,13 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      xs: "320px",
+      sm: "640px",
+      md: "960px",
+      lg: "1024px",
+      xl: "1280px",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -21,6 +28,7 @@ module.exports = {
         title: "#252D58", // タイトル
         "sub-title": "#A9C0CB", // サブタイトル: タイトル下の日本語訳
         "background-object": "#D6EAF3", // 背景オブジェクト
+        "news-background": "#f8fafc", // ニュース背景
         background: "#F0FAFF", // 背景
         gray: "#AAAAAA", // グレーテキスト
         white: colors.white,
