@@ -102,7 +102,7 @@ export const NewsList = ({ newsCards }: NewsCardListProps) => {
         alt=""
         width={10}
         height={10}
-        className="absolute left-1/2 top-[46%] sm:top-[57%]  transform -translate-x-1/2 -translate-y-1/2 z-0 sm:h-[1800px] h-[1800px]"
+        className="absolute left-1/2 top-[46%] sm:top-[57%]  transform -translate-x-1/2 -translate-y-1/2 z-0 sm:h-[1000px] h-[1800px]"
       />
     </div>
   );
