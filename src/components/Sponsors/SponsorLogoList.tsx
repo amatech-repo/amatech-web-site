@@ -11,7 +11,7 @@ export const SponsorLogoList = ({ sponsors }: SponsorListProps) => {
   const contents = sponsors?.contents ?? [];
 
   return (
-    <div className="flex flex-col sm:flex-row gap-[42px] items-center w-full">
+    <div className="flex flex-col sm:flex-row gap-[42px] justify-center items-center w-full">
       {contents.map((sponsor, index) => (
         <SponsorLogo key={index} ImagePath={sponsor.url?.url ?? undefined} />
       ))}

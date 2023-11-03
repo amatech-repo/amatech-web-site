@@ -14,7 +14,7 @@ type ContentProps = {
 export const Activity = (props: Props) => {
   const { imagePath, title, texts } = props;
   return (
-    <div className="flex flex-col items-center justify-end w-full py-14 mx-auto rounded-3xl drop-shadow-lg bg-white mb-4">
+    <div className="flex flex-col items-center justify-end w-full py-14 mx-auto rounded-3xl drop-shadow-lg bg-white">
       <div className="px-7 justify-center items-center gap-2.5 inline-flex">
         <div className="text-primary text-3xl font-bold">{title}</div>
       </div>
