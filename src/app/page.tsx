@@ -47,6 +47,7 @@ export default async function Home() {
               title={"Holding Format"}
               subtitle={"開催形式"}
               image={ImageSize.small}
+              id="holding-format"
             />
             <HoldingFormat />
           </section>
@@ -89,6 +90,7 @@ export default async function Home() {
               title={"FAQ"}
               subtitle={"よくある質問"}
               image={ImageSize.small}
+              id="faq"
             />
             <FAQList faqs={faqs} />
           </section>
@@ -97,6 +99,7 @@ export default async function Home() {
               title={"SNS"}
               subtitle={"公式SNS"}
               image={ImageSize.small}
+              id="sns"
             />
             <SNSCardList />
           </section>
