@@ -13,20 +13,19 @@ import { SNSCardList } from "@/components/SNSCard/list";
 
 const faqs = [
   {
-    imagePath: "./images/FAQ1.svg",
-    isRight: false,
+    q: "参加費はかかりますか？",
+    a: "参加費は無料です。",
+    emoji: "💰",
   },
   {
-    imagePath: "./images/FAQ2.svg",
-    isRight: true,
+    q: "参加資格はありますか？",
+    a: "特にありません。どなたでもご参加いただけます。",
+    emoji: "👥",
   },
   {
-    imagePath: "./images/FAQ3.svg",
-    isRight: false,
-  },
-  {
-    imagePath: "./images/FAQ4.svg",
-    isRight: true,
+    q: "どんな人が参加していますか？",
+    a: "学生から社会人まで幅広い方が参加しています。",
+    emoji: "👩‍💻",
   },
 ];
 

@@ -2,8 +2,10 @@ import Image from "next/image";
 import { FAQ } from "./FAQ";
 
 type FAQ = {
-  imagePath: string;
-  isRight: boolean;
+  q: string;
+  a: string;
+  emoji: string;
+  flipped?: boolean;
 };
 
 type FAQs = {
@@ -12,9 +14,9 @@ type FAQs = {
 
 export const FAQList = ({ faqs }: FAQs) => {
   return (
-    <div className="w-full flex flex-col justify-center mx-3">
-      {faqs.map((faq, index) => (
-        <FAQ key={index} imagePath={faq.imagePath} isRight={faq.isRight} />
+    <div className="flex flex-col mx-6 space-y-4 sm:space-y-6">
+      {faqs.map((faq, i) => (
+        <FAQ key={i} {...faq} flipped={i % 2 === 0 ? false : true} />
       ))}
     </div>
   );
