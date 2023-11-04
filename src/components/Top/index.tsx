@@ -9,7 +9,7 @@ export const Top = () => {
       </div>
 
       <div className="max-w-full mx-6 flex flex-col gap-6 lg:mx-0">
-        <div className="text-neutral-900 font-extrabold text-[9.4vw] leading-normal  lg:text-6xl lg:leading-snug">
+        <div className="text-neutral-900 font-extrabold text-[9.4vw] leading-normal  lg:text-6xl lg:leading-snug font-concept">
           どうせやるなら、
           <br />
           強くなろう。
