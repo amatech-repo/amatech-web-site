@@ -17,7 +17,7 @@ export const SectionTitle = (props: Props) => {
   const { title, subtitle, image } = props;
 
   return (
-    <div className="flex items-center justify-center relative w-full h-full mb-14">
+    <div className="flex items-center justify-center relative mb-10">
       <Image
         src={`./background/sections/${image}`}
         alt=""
@@ -26,8 +26,8 @@ export const SectionTitle = (props: Props) => {
         className="z-10"
       />
       <div className="text-title absolute z-20 text-center w-full">
-        <div className="text-5xl font-bold">{title}</div>
-        <div className="text-lg mt-3">{subtitle}</div>
+        <div className="text-4xl sm:text-5xl font-bold">{title}</div>
+        <div className="mt-1 text-sm sm:mt-3 font-semibold text-slate-400">{subtitle}</div>
       </div>
     </div>
   );
