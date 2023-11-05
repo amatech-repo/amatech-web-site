@@ -60,6 +60,7 @@ export const Top = () => {
         <div className="max-w-[27rem] space-y-4 text-sm font-semibold leading-6 text-neutral-500">
           <div>
             あまてくは京都産業大学の学生を中心とした
+            <wbr />
             <span className="text-amatech-log">エンジニアコミュニティ</span>
             です。
           </div>
