@@ -14,9 +14,8 @@ export const Top = () => {
       return;
     }
 
-    const dummyLogoWrapper = document.getElementById(
-      "top--dummy-logo-img"
-    )?.parentElement;
+    const dummyLogoWrapper = document.getElementById("top--dummy-logo-img")
+      ?.parentElement;
 
     if (dummyLogoWrapper && logoWrapper) {
       const style = dummyLogoWrapper.getAttribute("style");
@@ -25,17 +24,17 @@ export const Top = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center px-6 sm:px-0 sm:grid sm:grid-cols-12 sm:h-[calc(100vh-64px)] sm:grid-rows-1 ">
+    <div className="flex flex-col items-center justify-center px-6 sm:grid sm:h-[calc(100vh-64px)] sm:grid-cols-12 sm:grid-rows-1 sm:px-0 ">
       {/* Logo */}
       <div
         id="top--logo-wrapper"
-        className="hidden sm:block mx-12 mt-16 mb-14 sm:m-0 sm:row-start-1 sm:col-start-6 sm:col-span-6 select-none will-change-transform transition-transform duration-700 ease-in-out lg:ml-6 lg:mt-32"
+        className="mx-12 mb-14 mt-16 hidden select-none transition-transform duration-700 ease-in-out will-change-transform sm:col-span-6 sm:col-start-6 sm:row-start-1 sm:m-0 sm:block lg:ml-6 lg:mt-32"
       >
         <LogoImage />
       </div>
       {/* Dummy Logo */}
       <Tilt
-        className="mx-12 mt-16 mb-14 sm:m-0 sm:row-start-1 sm:col-start-6 sm:col-span-6 select-none z-40 sm:opacity-0 lg:ml-6 lg:mt-32"
+        className="z-40 mx-12 mb-14 mt-16 select-none sm:col-span-6 sm:col-start-6 sm:row-start-1 sm:m-0 sm:opacity-0 lg:ml-6 lg:mt-32"
         gyroscope
         onMove={(tilt) => {
           transportStyles(tilt);
@@ -47,18 +46,18 @@ export const Top = () => {
       </Tilt>
 
       {/* Wave */}
-      <div className="relative hidden sm:block sm:row-start-1 sm:col-span-full sm:h-[calc(100vh-64px)] select-none ">
+      <div className="relative hidden select-none sm:col-span-full sm:row-start-1 sm:block sm:h-[calc(100vh-64px)] ">
         <Image src="./background/wave.svg" width={2000} height={1276} alt="" />
       </div>
 
       {/* Text */}
-      <div className="max-w-full mx-6 flex flex-col gap-10 z-20 lg:mx-0 sm:col-start-2 sm:col-span-4 sm:row-start-1">
-        <div className="text-neutral-900 font-extrabold text-[9.4vw] whitespace-nowrap leading-normal sm:text-4xl sm:leading-snug md:text-5xl lg:text-6xl lg:leading-snug font-concept lg:mt-10">
+      <div className="z-20 mx-6 flex max-w-full flex-col gap-10 sm:col-span-4 sm:col-start-2 sm:row-start-1 lg:mx-0">
+        <div className="whitespace-nowrap font-concept text-[9.4vw] font-extrabold leading-normal text-neutral-900 sm:text-4xl sm:leading-snug md:text-5xl lg:mt-10 lg:text-6xl lg:leading-snug">
           どうせやるなら、
           <br />
           強くなろう。
         </div>
-        <div className="leading-6 space-y-4 text-sm max-w-[27rem] font-semibold text-neutral-500">
+        <div className="max-w-[27rem] space-y-4 text-sm font-semibold leading-6 text-neutral-500">
           <div>
             あまてくは京都産業大学の学生を中心とした
             <span className="text-amatech-log">エンジニアコミュニティ</span>

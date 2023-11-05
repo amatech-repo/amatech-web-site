@@ -14,21 +14,21 @@ type ContentProps = {
 export const Activity = (props: Props) => {
   const { imagePath, title, texts } = props;
   return (
-    <div className="flex flex-col items-center justify-end w-full py-14 mx-auto rounded-3xl drop-shadow-lg bg-white">
-      <div className="px-7 justify-center items-center gap-2.5 inline-flex">
+    <div className="mx-auto flex w-full flex-col items-center justify-end rounded-3xl bg-white py-14 drop-shadow-lg">
+      <div className="inline-flex items-center justify-center gap-2.5 px-7">
         <div className="text-primary text-3xl font-bold">{title}</div>
       </div>
-      <div className="flex flex-col w-full justify-center items-center gap-4 sm:flex-row sm:justify-between sm:px-24">
+      <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row sm:justify-between sm:px-24">
         <div className="sm:hidden">
           <Image
-            className="w-44 h-44"
+            className="h-44 w-44"
             src={imagePath}
             alt=""
             width={180}
             height={180}
           />
         </div>
-        <div className="w-68 flex-col justify-center items-start inline-flex text-xl">
+        <div className="w-68 inline-flex flex-col items-start justify-center text-xl">
           <ActivityContent text={texts[0]} />
           <ActivityContent text={texts[1]} />
           <ActivityContent text={texts[2]} />
@@ -36,7 +36,7 @@ export const Activity = (props: Props) => {
         </div>
         <div className="hidden sm:block">
           <Image
-            className="w-44 h-44"
+            className="h-44 w-44"
             src={imagePath}
             alt=""
             width={180}
@@ -52,7 +52,7 @@ export const Activity = (props: Props) => {
 const ActivityContent = (props: ContentProps) => {
   const { text } = props;
   return (
-    <div className="justify-start items-start inline-flex">
+    <div className="inline-flex items-start justify-start">
       <Dot />
       <div className="text-primary text-xl ">{text}</div>
     </div>
@@ -61,7 +61,7 @@ const ActivityContent = (props: ContentProps) => {
 
 const Dot = () => {
   return (
-    <div className="text-black text-2xl font-bold font-['YuGothic'] tracking-wide">
+    <div className="font-['YuGothic'] text-2xl font-bold tracking-wide text-black">
       ・
     </div>
   );

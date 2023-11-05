@@ -14,15 +14,15 @@ export const NewsList = ({ newsCards }: NewsCardListProps) => {
       {contents.map((newsCard: NewsType, index) => (
         <div
           key={index}
-          className="flex flex-col items-center first:pt-10 mb-14 relative"
+          className="relative mb-14 flex flex-col items-center first:pt-10"
         >
-          <div className="mb-6 items-center relative text-center w-full grid grid-cols-[auto,24px,auto]">
+          <div className="relative mb-6 grid w-full grid-cols-[auto,24px,auto] items-center text-center">
             {/* dot */}
-            <div className="row-start-1 col-span-full flex justify-center">
-              <div className="w-6 h-6 bg-white rounded-full border-background-object border-[6px] z-40"></div>
+            <div className="col-span-full row-start-1 flex justify-center">
+              <div className="z-40 h-6 w-6 rounded-full border-[6px] border-background-object bg-white"></div>
             </div>
             {/* date */}
-            <div className="col-start-1 row-start-1 font-bold text-2xl">
+            <div className="col-start-1 row-start-1 text-2xl font-bold">
               {newsCard.eventDate.split("T")[0].split("-").slice(1).join("/")}
             </div>
           </div>
@@ -38,14 +38,14 @@ export const NewsList = ({ newsCards }: NewsCardListProps) => {
       <div className="flex">
         <Link
           href="/news"
-          className="bg-white rounded-full border-4 border-background-object px-7 py-3 mx-auto z-10"
+          className="z-10 mx-auto rounded-full border-4 border-background-object bg-white px-7 py-3"
         >
           もっと見る
         </Link>
       </div>
 
       {/* vertical axis */}
-      <div className="absolute w-2 h-full bg-background-object rounded-full top-0 left-1/2 -translate-x-1/2 z-0"></div>
+      <div className="absolute left-1/2 top-0 z-0 h-full w-2 -translate-x-1/2 rounded-full bg-background-object"></div>
     </div>
   );
 };

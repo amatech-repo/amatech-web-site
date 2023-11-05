@@ -11,7 +11,7 @@ export const LinkIcon = ({ url, img, alt }: Props) => {
   return (
     <Link
       href={url}
-      className="hover:scale-110 active:scale-100 transition"
+      className="transition hover:scale-110 active:scale-100"
       target="_blank"
     >
       <Image alt={alt} src={img} width={30} height={30} />

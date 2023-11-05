@@ -19,7 +19,7 @@ export const SectionTitle = (props: Props) => {
 
   return (
     <div
-      className="flex items-center justify-center relative mb-10"
+      className="relative mb-10 flex items-center justify-center"
       id={props.id}
     >
       <Image
@@ -29,9 +29,9 @@ export const SectionTitle = (props: Props) => {
         height={288}
         className="z-10"
       />
-      <div className="text-title absolute z-20 text-center w-full">
-        <div className="text-4xl sm:text-5xl font-bold">{title}</div>
-        <div className="mt-1 text-sm sm:mt-3 font-semibold text-slate-400">
+      <div className="absolute z-20 w-full text-center text-title">
+        <div className="text-4xl font-bold sm:text-5xl">{title}</div>
+        <div className="mt-1 text-sm font-semibold text-slate-400 sm:mt-3">
           {subtitle}
         </div>
       </div>

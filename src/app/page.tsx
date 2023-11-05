@@ -44,8 +44,8 @@ export default async function Home() {
       <section className="">
         <Top />
       </section>
-      <div className="bg-background w-full mt-20 rounded-t-[140px]">
-        <div className="max-w-3xl mx-auto pb-32">
+      <div className="mt-20 w-full rounded-t-[140px] bg-background">
+        <div className="mx-auto max-w-3xl pb-32">
           <section className="mt-24">
             <SectionTitle
               title={"Holding Format"}

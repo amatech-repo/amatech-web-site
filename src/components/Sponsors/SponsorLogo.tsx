@@ -6,7 +6,7 @@ type Props = {
 
 export const SponsorLogo = ({ ImagePath }: Props) => {
   return (
-    <div className="w-[196px] h-[196px] bg-white rounded-[32px] shadow-2xl flex items-center justify-center">
+    <div className="flex h-[196px] w-[196px] items-center justify-center rounded-[32px] bg-white shadow-2xl">
       {ImagePath && <Image src={ImagePath} alt="" width={160} height={116} />}
     </div>
   );

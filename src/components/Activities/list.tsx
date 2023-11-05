@@ -10,12 +10,12 @@ export const ActivityList = () => {
         alt={""}
         width={10}
         height={10}
-        className="absolute left-1/2 top-0 transform -translate-x-1/2 z-0 sm:h-[1200px] h-[1800px]"
+        className="absolute left-1/2 top-0 z-0 h-[1800px] -translate-x-1/2 transform sm:h-[1200px]"
       />
 
       {/* Activities */}
       <div className="z-10 px-4 py-2 sm:px-0">
-        <div className="mt-2 mb-16">
+        <div className="mb-16 mt-2">
           <Activity
             imagePath={"./icons/memo.svg"}
             title={"勉強会・LT会"}

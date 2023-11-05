@@ -17,9 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" style={{ height: "100%" }}>
-      <body className="flex flex-col min-h-screen">
+      <body className="flex min-h-screen flex-col">
         <Header />
-        <main className="flex flex-col flex-1 justify-center items-center">
+        <main className="flex flex-1 flex-col items-center justify-center">
           {children}
         </main>
         <Footer />
