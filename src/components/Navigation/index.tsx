@@ -11,24 +11,28 @@ export const Navigation = () => {
           </Link>
         </li>
         <div className="flex justify-end items-center ml-auto space-x-5">
-          <LinkItem href={"/icons/news.svg"} text={"ニュース"} />
-          <LinkItem href={"/icons/sponsor.svg"} text={"開催形式"} />
-          <LinkItem href={"/icons/member.svg"} text={"活動内容"} />
-          <LinkItem href={"/icons/faq.svg"} text={"FAQ"} />
-          <LinkItem href={"/icons/contact.svg"} text={"SNS"} />
+          <LinkItem href="" icon={"/icons/news.svg"} text={"ニュース"} />
+          <LinkItem href="" icon={"/icons/sponsor.svg"} text={"開催形式"} />
+          <LinkItem href="" icon={"/icons/member.svg"} text={"活動内容"} />
+          <LinkItem href="" icon={"/icons/faq.svg"} text={"FAQ"} />
+          <LinkItem href="" icon={"/icons/contact.svg"} text={"SNS"} />
         </div>
       </ul>
     </nav>
   );
 };
 
-export const LinkItem = (props: { href: string; text: string }) => {
+export const LinkItem = (props: {
+  href: string;
+  icon: string;
+  text: string;
+}) => {
   return (
-    <Link href="/news" className="flex gap-2">
-      <div className="flex gap-2 p-2">
-        <Image src={props.href} alt={""} width={24} height={24} />
-        {props.text}
+    <Link href={props.href} className="flex gap-2 p-2">
+      <div className="w-6 h-6">
+        <Image src={props.icon} alt={""} width={24} height={24} />
       </div>
+      <div className="whitespace-nowrap font-semibold">{props.text}</div>
     </Link>
   );
 };

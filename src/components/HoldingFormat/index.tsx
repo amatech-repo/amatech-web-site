@@ -7,28 +7,24 @@ export const HoldingFormat = () => {
       <div className="mb-4">
         <WeekCard
           holdingWeek="毎週"
-          dayOfWeek="月曜日"
+          dayOfWeek="金曜日"
           text="対面・オンラインで毎週交互に開催しています！"
         />
       </div>
-      <div className="flex flex-col sm:flex-row sm:space-x-4 mb-4">
-        <div className="flex-grow sm:flex-grow-0 mb-4 sm:mb-0 w-full sm:min-w-[300px]">
-          <HoldingFormatCard
-            holdingFormat="対面"
-            image="./icons/study.svg"
-            place="学内の教室"
-            time="4限・5限"
-          />
-        </div>
-        <div className="flex-grow sm:flex-grow-0 w-full sm:min-w-[300px]">
-          <HoldingFormatCard
-            discordLogo="./icons/discord.svg"
-            holdingFormat="オンライン"
-            image="./icons/online.svg"
-            place="Discord"
-            time="21:00~"
-          />
-        </div>
+      <div className="flex flex-col gap-4 sm:flex-row mb-4">
+        <HoldingFormatCard
+          holdingFormat="対面"
+          image="./icons/study.svg"
+          place="学内の教室"
+          time="4限・5限"
+        />
+        <HoldingFormatCard
+          discordLogo="./icons/discord.svg"
+          holdingFormat="オンライン"
+          image="./icons/online.svg"
+          place="Discord"
+          time="21:00~"
+        />
       </div>
     </div>
   );

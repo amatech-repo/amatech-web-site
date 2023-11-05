@@ -4,7 +4,7 @@ import { HamburgerMenu } from "../Navigation/HamburgerMenu";
 
 export const Header = () => {
   return (
-    <header className="bg-white py-5 px-9 w-10/12	h-16 rounded-3xl drop-shadow-md mx-auto relative z-10">
+    <header className="bg-white py-5 px-6 w-[min(90%,1200px)] rounded-2xl shadow-md mx-auto z-10 sticky mt-3 top-3 z-50">
       <div className="lg:hidden">
         <HamburgerMenu /> {/* スマホサイズで表示 */}
       </div>
