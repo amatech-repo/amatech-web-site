@@ -29,13 +29,13 @@ export const Top = () => {
       {/* Logo */}
       <div
         id="top--logo-wrapper"
-        className="mx-12 mt-16 mb-14 sm:m-0 sm:row-start-1 sm:col-start-6 sm:col-span-6 select-none will-change-transform transition-transform duration-700 ease-in-out lg:ml-6 lg:mt-32"
+        className="hidden sm:block mx-12 mt-16 mb-14 sm:m-0 sm:row-start-1 sm:col-start-6 sm:col-span-6 select-none will-change-transform transition-transform duration-700 ease-in-out lg:ml-6 lg:mt-32"
       >
         <LogoImage />
       </div>
       {/* Dummy Logo */}
       <Tilt
-        className="mx-12 mt-16 mb-14 sm:m-0 sm:row-start-1 sm:col-start-6 sm:col-span-6 select-none z-40 opacity-0 lg:ml-6 lg:mt-32"
+        className="mx-12 mt-16 mb-14 sm:m-0 sm:row-start-1 sm:col-start-6 sm:col-span-6 select-none z-40 sm:opacity-0 lg:ml-6 lg:mt-32"
         gyroscope
         onMove={(tilt) => {
           transportStyles(tilt);
