@@ -15,8 +15,13 @@ export const HamburgerMenu = () => {
     <nav className="relative">
       <ul className="space-x-auto flex h-6 flex-row items-center justify-between">
         <li>
-          <Link href="/" className="text-amatech-log">
-            あまてく
+          <Link href="/" className="block w-16 text-amatech-log">
+            <Image
+              src="/logo/amatech-text.svg"
+              alt="あまてく"
+              width={240}
+              height={240}
+            />
           </Link>
         </li>
 

@@ -6,8 +6,8 @@ export const Navigation = () => {
     <nav>
       <ul className="space-x-auto flex h-6 flex-row">
         <li className="flex items-center justify-start">
-          <Link href="/" className="text-amatech-log">
-            あまてく
+          <Link href="/" className="text-amatech-log w-16">
+            <Image src="/logo/amatech-text.svg" alt="あまてく" width={240} height={240} />
           </Link>
         </li>
         <div className="ml-auto flex items-center justify-end space-x-5">
