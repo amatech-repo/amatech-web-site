@@ -43,7 +43,7 @@ export const MemberList = ({ members }: MemberListProps) => {
   const listRef2 = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    autoScroll(listRef2.current, -1);
+    autoScroll(listRef2.current, -0.5);
 
     const list1 = listRef1.current;
 
@@ -51,7 +51,7 @@ export const MemberList = ({ members }: MemberListProps) => {
 
     autoScroll(
       listRef1.current,
-      1,
+      0.5,
       listRef1.current.getBoundingClientRect().width / 2,
     );
   }, []);
