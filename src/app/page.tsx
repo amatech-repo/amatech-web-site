@@ -41,7 +41,7 @@ export default async function Home() {
 
   return (
     <>
-      <section className="max-w-5xl">
+      <section className="">
         <Top />
       </section>
       <div className="bg-background w-full mt-20 rounded-t-[140px]">
