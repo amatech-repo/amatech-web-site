@@ -44,7 +44,7 @@ export default async function Home() {
       <section className="">
         <Top />
       </section>
-      <div className="mt-20 w-full rounded-t-[140px] bg-background">
+      <div className="mt-20 w-full rounded-t-[140px] bg-background z-20">
         <div className="pb-32">
           <section className="mt-24 max-w-2xl mx-auto">
             <SectionTitle
