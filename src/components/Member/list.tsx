@@ -64,7 +64,14 @@ export const MemberList = ({ members }: MemberListProps) => {
   return (
     <div className="w-full space-y-6 overflow-hidden py-2">
       <div className="flex w-max" ref={listRef1}>
-        {[...firstHalf, ...firstHalf].map((member, index) => (
+        {[
+          ...firstHalf,
+          ...firstHalf,
+          ...firstHalf,
+          ...firstHalf,
+          ...firstHalf,
+          ...firstHalf,
+        ].map((member, index) => (
           <div key={index} className="mr-6 min-w-max">
             <Member
               imageUrl={member.imageUrl ? member.imageUrl.url : ""}
@@ -79,21 +86,26 @@ export const MemberList = ({ members }: MemberListProps) => {
         ))}
       </div>
       <div className="flex w-max" ref={listRef2}>
-        {[...secondHalf, ...secondHalf, ...secondHalf, ...secondHalf].map(
-          (member, index) => (
-            <div key={Number(index) + halfLength} className="mr-6 min-w-max">
-              <Member
-                imageUrl={member.imageUrl ? member.imageUrl.url : ""}
-                name={member.name}
-                grade={member.age.join(", ")}
-                role={member.role.join(", ")}
-                github={member.github}
-                twitter={member.twitter}
-                instagram={member.instagram}
-              />
-            </div>
-          ),
-        )}
+        {[
+          ...secondHalf,
+          ...secondHalf,
+          ...secondHalf,
+          ...secondHalf,
+          ...secondHalf,
+          ...secondHalf,
+        ].map((member, index) => (
+          <div key={Number(index) + halfLength} className="mr-6 min-w-max">
+            <Member
+              imageUrl={member.imageUrl ? member.imageUrl.url : ""}
+              name={member.name}
+              grade={member.age.join(", ")}
+              role={member.role.join(", ")}
+              github={member.github}
+              twitter={member.twitter}
+              instagram={member.instagram}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
