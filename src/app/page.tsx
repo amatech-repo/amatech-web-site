@@ -13,20 +13,24 @@ import { SNSCardList } from "@/components/SNSCard/list";
 
 const faqs = [
   {
-    imagePath: "./images/FAQ1.svg",
-    isRight: false,
+    q: "活動内容を具体的に教えて下さい！",
+    a: "活動内容をご覧ください！その他わからないこと、気になることがあればTwitterのDMへ気軽にお問い合わせください！",
+    emoji: "🚀",
   },
   {
-    imagePath: "./images/FAQ2.svg",
-    isRight: true,
+    q: "プログラミング経験は必須ですか？",
+    a: "文系理系問わず、未経験者も大歓迎です！",
+    emoji: "🐻‍❄️",
   },
   {
-    imagePath: "./images/FAQ3.svg",
-    isRight: false,
+    q: "学年に制限はありますか？",
+    a: "京都産業大学に所属する方ならどなたでも歓迎します！他大学の方やコミュニティの方で興味ある方は、Twitter DMまでご連絡ください！",
+    emoji: "🐣",
   },
   {
-    imagePath: "./images/FAQ4.svg",
-    isRight: true,
+    q: "掛け持ちは可能ですか？",
+    a: "可能です！CACや他サークルに入っている方も在籍しています！",
+    emoji: "😆",
   },
 ];
 
@@ -37,16 +41,17 @@ export default async function Home() {
 
   return (
     <>
-      <section className="max-w-4xl">
+      <section className="max-w-5xl">
         <Top />
       </section>
-      <div className="bg-background w-full mt-20 rounded-tl-[300px] rounded-tr-[300px]">
-        <div className="max-w-4xl mx-auto pb-32">
+      <div className="bg-background w-full mt-20 rounded-t-[140px]">
+        <div className="max-w-3xl mx-auto pb-32">
           <section className="mt-24">
             <SectionTitle
               title={"Holding Format"}
               subtitle={"開催形式"}
               image={ImageSize.small}
+              id="holding-format"
             />
             <HoldingFormat />
           </section>
@@ -89,6 +94,7 @@ export default async function Home() {
               title={"FAQ"}
               subtitle={"よくある質問"}
               image={ImageSize.small}
+              id="faq"
             />
             <FAQList faqs={faqs} />
           </section>
@@ -97,6 +103,7 @@ export default async function Home() {
               title={"SNS"}
               subtitle={"公式SNS"}
               image={ImageSize.small}
+              id="sns"
             />
             <SNSCardList />
           </section>
