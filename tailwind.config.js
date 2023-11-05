@@ -1,11 +1,11 @@
-/** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     screens: {
@@ -39,11 +39,30 @@ module.exports = {
       borderRadius: {
         32: "32px",
       },
-    },
-    fontFamily: {
-      base: "YuGothic", // 游ゴシック
-      concept: "YuMincho", // 游明朝体
-      title: "var(--font-urbanist)", // アーバニスト
+      fontFamily: {
+        base: "YuGothic", // 游ゴシック
+        concept: "YuMincho", // 游明朝体
+        title: "var(--font-urbanist)", // アーバニスト
+      },
+      animation: {
+        "top-logo": "3d-move 18s ease-in-out infinite",
+      },
+      keyframes: {
+        "3d-move": {
+          "0%,100%": {
+            transform:
+              "perspective(800px) rotateX(12deg) rotateY(24deg) scale3d(1, 1, 1)",
+          },
+          "25%": {
+            transform:
+              "perspective(800px) rotateX(-18deg) rotateY(-5deg) scale3d(1, 1, 1)",
+          },
+          "50%": {
+            transform:
+              "perspective(800px) rotateX(8deg) rotateY(-20deg) scale3d(1, 1, 1)",
+          },
+        },
+      },
     },
   },
   plugins: [],

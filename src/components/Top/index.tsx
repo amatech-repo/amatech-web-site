@@ -19,7 +19,10 @@ export const Top = () => {
 
     if (dummyLogoWrapper && logoWrapper) {
       const style = dummyLogoWrapper.getAttribute("style");
-      logoWrapper.setAttribute("style", style ? style : "");
+      logoWrapper.setAttribute(
+        "style",
+        style ? style + ";animation:none;" : "",
+      );
     }
   }
 
@@ -28,7 +31,7 @@ export const Top = () => {
       {/* Logo */}
       <div
         id="top--logo-wrapper"
-        className="mx-12 mb-14 mt-16 hidden select-none transition-transform duration-700 ease-in-out will-change-transform sm:col-span-6 sm:col-start-6 sm:row-start-1 sm:m-0 sm:block lg:ml-6 lg:mt-32"
+        className="animate-top-logo mx-12 mb-14 mt-16 hidden select-none transition-transform duration-700 ease-in-out will-change-transform sm:col-span-6 sm:col-start-6 sm:row-start-1 sm:m-0 sm:block lg:ml-6 lg:mt-32"
       >
         <LogoImage />
       </div>
@@ -41,6 +44,7 @@ export const Top = () => {
         }}
         tiltMaxAngleX={30}
         tiltMaxAngleY={30}
+        perspective={800}
       >
         <LogoImage isDummy />
       </Tilt>
