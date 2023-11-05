@@ -43,7 +43,7 @@ module.exports = {
     fontFamily: {
       base: "YuGothic", // 游ゴシック
       concept: "YuMincho", // 游明朝体
-      title: "Urbanist", // アーバニスト
+      title: "var(--font-urbanist)", // アーバニスト
     },
   },
   plugins: [],
