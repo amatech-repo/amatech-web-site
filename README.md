@@ -1,9 +1,9 @@
-# amatech-web-site
-
+# 概要
+- [あまてく公式webサイト](https://amatech.vercel.app)
 
 ## 環境構築
 1. `git clone amatech-repo/amatech-web-site`
-2. `npm i`
+2. `npm ci`
 3. `npm run dev`
 
 ## storybookについて
