@@ -44,9 +44,9 @@ export default async function Home() {
       <section className="">
         <Top />
       </section>
-      <div className="mt-20 w-full rounded-t-[140px] bg-background z-20">
+      <div className="z-20 mt-20 w-full rounded-t-[140px] bg-background">
         <div className="pb-32">
-          <section className="mt-24 max-w-2xl mx-auto">
+          <section className="mx-auto mt-24 max-w-2xl">
             <SectionTitle
               title={"Holding Format"}
               subtitle={"開催形式"}
@@ -63,7 +63,7 @@ export default async function Home() {
             />
             <MemberList members={admin ? admin : undefined} />
           </section>
-          <section className="mt-24 max-w-3xl mx-auto">
+          <section className="mx-auto mt-24 max-w-3xl">
             <SectionTitle
               title={"News"}
               subtitle={"最新情報"}
@@ -71,7 +71,7 @@ export default async function Home() {
             />
             <NewsList newsCards={news ? news : undefined}></NewsList>
           </section>
-          <section className="mt-24 max-w-5xl mx-auto">
+          <section className="mx-auto mt-24 max-w-5xl">
             <SectionTitle
               title={"Sponsors"}
               subtitle={"協賛・スポンサー企業"}
@@ -80,7 +80,7 @@ export default async function Home() {
             {/* @ts-ignore */}
             <SponsorLogoList sponsors={sponsors ? sponsors : undefined} />
           </section>
-          <section className="mt-24 max-w-3xl mx-auto">
+          <section className="mx-auto mt-24 max-w-3xl">
             <SectionTitle
               title={"Activities"}
               subtitle={"活動内容"}
@@ -89,7 +89,7 @@ export default async function Home() {
 
             <ActivityList />
           </section>
-          <section className="mt-24 max-w-3xl mx-auto">
+          <section className="mx-auto mt-24 max-w-3xl">
             <SectionTitle
               title={"FAQ"}
               subtitle={"よくある質問"}
@@ -98,7 +98,7 @@ export default async function Home() {
             />
             <FAQList faqs={faqs} />
           </section>
-          <section className="mt-24 max-w-5xl mx-auto">
+          <section className="mx-auto mt-24 max-w-5xl">
             <SectionTitle
               title={"SNS"}
               subtitle={"公式SNS"}
