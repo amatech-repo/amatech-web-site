@@ -4,12 +4,12 @@ import { LinkIcon } from "../LinkIcon";
 
 export const Footer = () => {
   return (
-    <footer className="bg-white grid grid-cols-12 pt-12 pb-4">
-      <Link href="/" className="row-start-1 col-start-3">
+    <footer className="grid grid-cols-12 bg-white pb-4 pt-12">
+      <Link href="/" className="col-start-3 row-start-1">
         <Image alt="" src="/logo/amatech.svg" width={100} height={100} />
       </Link>
-      <div className="flex flex-col items-center gap-8 col-span-full row-start-1 w-max mx-auto pb-12">
-        <div className="flex flex-col gap-2 text-xs w-max text-amatech-log font-bold font-YuGothic tracking-wider">
+      <div className="col-span-full row-start-1 mx-auto flex w-max flex-col items-center gap-8 pb-12">
+        <div className="font-YuGothic flex w-max flex-col gap-2 text-xs font-bold tracking-wider text-amatech-log">
           <Link href="/about" className="hover:underline">
             あまてくとは？
           </Link>
@@ -33,7 +33,7 @@ export const Footer = () => {
           />
         </div>
       </div>
-      <div className="row-start-2 col-start-1 col-end-[-1] text-center text-xs font-YuGothic text-gray font-bold">
+      <div className="font-YuGothic col-start-1 col-end-[-1] row-start-2 text-center text-xs font-bold text-gray">
         あまてく © 2023
       </div>
     </footer>

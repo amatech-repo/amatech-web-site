@@ -10,7 +10,7 @@ type MemberListProps = {
 function autoScroll(
   container: HTMLDivElement | null,
   speed: number,
-  initialAmount: number = 0
+  initialAmount: number = 0,
 ) {
   if (!container) return;
 
@@ -36,14 +36,14 @@ function autoScroll(
 
 export const MemberList = ({ members }: MemberListProps) => {
   const [displayMembers, setDisplayMembers] = useState<MembersType[]>(
-    members?.contents || []
+    members?.contents || [],
   );
 
   const listRef1 = useRef<HTMLDivElement>(null);
   const listRef2 = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    autoScroll(listRef2.current, -1);
+    autoScroll(listRef2.current, -0.5);
 
     const list1 = listRef1.current;
 
@@ -51,8 +51,8 @@ export const MemberList = ({ members }: MemberListProps) => {
 
     autoScroll(
       listRef1.current,
-      1,
-      listRef1.current.getBoundingClientRect().width / 2
+      0.5,
+      listRef1.current.getBoundingClientRect().width / 2,
     );
   }, []);
 
@@ -62,10 +62,17 @@ export const MemberList = ({ members }: MemberListProps) => {
   const secondHalf = displayMembers.slice(halfLength);
 
   return (
-    <div className="overflow-hidden w-full space-y-6 py-2">
+    <div className="w-full space-y-6 overflow-hidden py-2">
       <div className="flex w-max" ref={listRef1}>
-        {[...firstHalf, ...firstHalf].map((member, index) => (
-          <div key={index} className="min-w-max mr-6">
+        {[
+          ...firstHalf,
+          ...firstHalf,
+          ...firstHalf,
+          ...firstHalf,
+          ...firstHalf,
+          ...firstHalf,
+        ].map((member, index) => (
+          <div key={index} className="mr-6 min-w-max">
             <Member
               imageUrl={member.imageUrl ? member.imageUrl.url : ""}
               name={member.name}
@@ -79,21 +86,26 @@ export const MemberList = ({ members }: MemberListProps) => {
         ))}
       </div>
       <div className="flex w-max" ref={listRef2}>
-        {[...secondHalf, ...secondHalf, ...secondHalf, ...secondHalf].map(
-          (member, index) => (
-            <div key={Number(index) + halfLength} className="min-w-max mr-6">
-              <Member
-                imageUrl={member.imageUrl ? member.imageUrl.url : ""}
-                name={member.name}
-                grade={member.age.join(", ")}
-                role={member.role.join(", ")}
-                github={member.github}
-                twitter={member.twitter}
-                instagram={member.instagram}
-              />
-            </div>
-          )
-        )}
+        {[
+          ...secondHalf,
+          ...secondHalf,
+          ...secondHalf,
+          ...secondHalf,
+          ...secondHalf,
+          ...secondHalf,
+        ].map((member, index) => (
+          <div key={Number(index) + halfLength} className="mr-6 min-w-max">
+            <Member
+              imageUrl={member.imageUrl ? member.imageUrl.url : ""}
+              name={member.name}
+              grade={member.age.join(", ")}
+              role={member.role.join(", ")}
+              github={member.github}
+              twitter={member.twitter}
+              instagram={member.instagram}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -6,8 +6,8 @@ type Props = {
 
 export const SponsorLogo = ({ ImagePath }: Props) => {
   return (
-    <div className="w-[196px] h-[196px] bg-white rounded-[32px] shadow-2xl flex items-center justify-center">
-      {ImagePath && <Image src={ImagePath} alt="" width={160} height={116} />}
+    <div className="grid h-40 w-40 place-content-center rounded-[32px] bg-white p-6 shadow-xl sm:h-52 sm:w-52 sm:p-8">
+      {ImagePath && <Image src={ImagePath} alt="" width={160} height={160} />}
     </div>
   );
 };

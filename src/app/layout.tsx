@@ -1,9 +1,13 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import clsx from "clsx";
 
-const inter = Inter({ subsets: ["latin"] });
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  variable: "--font-urbanist",
+});
 
 export const metadata = {
   title: "エンジニアコミュニティ あまてく",
@@ -17,9 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" style={{ height: "100%" }}>
-      <body className="flex flex-col min-h-screen">
+      <body className={clsx("flex min-h-screen flex-col", urbanist.variable)}>
         <Header />
-        <main className="flex flex-col flex-1 justify-center items-center">
+        <main className="flex flex-1 flex-col items-center justify-center">
           {children}
         </main>
         <Footer />

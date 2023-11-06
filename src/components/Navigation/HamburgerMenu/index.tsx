@@ -13,14 +13,19 @@ export const HamburgerMenu = () => {
 
   return (
     <nav className="relative">
-      <ul className="flex flex-row space-x-auto h-6 justify-between items-center">
+      <ul className="space-x-auto flex h-6 flex-row items-center justify-between">
         <li>
-          <Link href="/" className="text-amatech-log">
-            あまてく
+          <Link href="/" className="block w-16 text-amatech-log">
+            <Image
+              src="/logo/amatech-text.svg"
+              alt="あまてく"
+              width={240}
+              height={240}
+            />
           </Link>
         </li>
 
-        <li className="relative flex justify-end items-center ml-auto">
+        <li className="relative ml-auto flex items-center justify-end">
           <button onClick={toggleMenu} className="focus:outline-none">
             <Image
               src="/icons/hamburger.svg"
@@ -31,7 +36,7 @@ export const HamburgerMenu = () => {
           </button>
 
           {isOpen && (
-            <div className="absolute top-full mt-2 bg-white border border-slate-100 rounded-lg p-4 pr-8 shadow-lg">
+            <div className="absolute top-full mt-2 rounded-lg border border-slate-100 bg-white p-4 pr-8 shadow-lg">
               <ul className="space-y-3">
                 <LinkItem
                   href="/news"
