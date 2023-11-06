@@ -31,7 +31,7 @@ export const Top = () => {
       {/* Logo */}
       <div
         id="top--logo-wrapper"
-        className="animate-top-logo mx-12 mb-14 mt-16 hidden select-none transition-transform duration-700 ease-in-out will-change-transform sm:col-span-6 sm:col-start-6 sm:row-start-1 sm:m-0 sm:block lg:ml-6 lg:mt-32"
+        className="mx-12 mb-14 mt-16 hidden animate-top-logo select-none transition-transform duration-700 ease-in-out will-change-transform sm:col-span-6 sm:col-start-6 sm:row-start-1 sm:m-0 sm:block lg:ml-6 lg:mt-32"
       >
         <LogoImage />
       </div>
