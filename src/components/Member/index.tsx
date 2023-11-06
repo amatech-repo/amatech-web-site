@@ -15,23 +15,22 @@ export const Member = (props: Props) => {
   const { imageUrl, name, grade, role, github, twitter, instagram } = props;
 
   return (
-    <div className="font-YuGothic w-80 h-40 bg-white flex flex-row items-center pl-6 pr-4 rounded-xl shadow-md">
-      <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-lg">
+    <div className="font-YuGothic flex py-10 w-80 flex-row items-center rounded-3xl bg-white pl-8 pr-4 shadow-md hover:scale-105 transition-all">
+      <div className="relative h-24 w-24 overflow-hidden rounded-full shadow-lg">
         <Image src={imageUrl} alt="" layout="fill" objectFit="cover" />
       </div>
       <div className="ml-4 flex flex-col justify-between">
-        <p className="font-bold text-lg">{name}</p>
-        <div className="flex items-center space-x-2">
+        <p className="text-lg font-bold">{name}</p>
+        <div className="mt-1 flex items-center space-x-2">
           {role && (
-            <span className="text-blue-600 bg-blue-100 text-xs py-0.5 px-2 rounded-full">
+            <span className="rounded-full border border-blue-200 bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-500">
               {role}
             </span>
           )}
-
-          <p className="text-gray text-sm ">{grade}</p>
+          <p className="text-sm text-gray">{grade}</p>
         </div>
         {twitter || instagram || github ? (
-          <div className="flex flex-row space-x-2 w-fit h-8 px-2 justify-center items-center rounded-full bg-white drop-shadow-lg">
+          <div className="mt-2 flex h-8 w-fit flex-row items-center justify-center space-x-2 rounded-full bg-white px-2 drop-shadow-lg">
             <SNS sns="twitter" snsID={twitter}></SNS>
             <SNS sns="instagram" snsID={instagram}></SNS>
             <SNS sns="github" snsID={github}></SNS>

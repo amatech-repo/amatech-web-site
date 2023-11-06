@@ -11,7 +11,7 @@ export const HoldingFormat = () => {
           text="対面・オンラインで毎週交互に開催しています！"
         />
       </div>
-      <div className="flex flex-col gap-4 sm:flex-row mb-4">
+      <div className="mb-4 flex flex-col gap-4 sm:flex-row">
         <HoldingFormatCard
           holdingFormat="対面"
           image="./icons/study.svg"

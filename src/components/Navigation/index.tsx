@@ -4,13 +4,13 @@ import Image from "next/image";
 export const Navigation = () => {
   return (
     <nav>
-      <ul className="flex flex-row space-x-auto h-6">
-        <li className="flex justify-start items-center">
-          <Link href="/" className="text-amatech-log">
-            あまてく
+      <ul className="space-x-auto flex h-6 flex-row">
+        <li className="flex items-center justify-start">
+          <Link href="/" className="text-amatech-log w-16">
+            <Image src="/logo/amatech-text.svg" alt="あまてく" width={240} height={240} />
           </Link>
         </li>
-        <div className="flex justify-end items-center ml-auto space-x-5">
+        <div className="ml-auto flex items-center justify-end space-x-5">
           <LinkItem href="" icon={"/icons/news.svg"} text={"ニュース"} />
           <LinkItem href="" icon={"/icons/sponsor.svg"} text={"開催形式"} />
           <LinkItem href="" icon={"/icons/member.svg"} text={"活動内容"} />
@@ -29,7 +29,7 @@ export const LinkItem = (props: {
 }) => {
   return (
     <Link href={props.href} className="flex gap-2 p-2">
-      <div className="w-6 h-6">
+      <div className="h-6 w-6">
         <Image src={props.icon} alt={""} width={24} height={24} />
       </div>
       <div className="whitespace-nowrap font-semibold">{props.text}</div>
