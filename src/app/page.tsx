@@ -68,6 +68,7 @@ export default async function Home() {
               title={"News"}
               subtitle={"最新情報"}
               image={ImageSize.small}
+              id="news"
             />
             <NewsList newsCards={news ? news : undefined}></NewsList>
           </section>
@@ -85,6 +86,7 @@ export default async function Home() {
               title={"Activities"}
               subtitle={"活動内容"}
               image={ImageSize.small}
+              id="activities"
             />
 
             <ActivityList />
