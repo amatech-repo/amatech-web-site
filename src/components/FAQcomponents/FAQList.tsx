@@ -1,15 +1,9 @@
 import Image from "next/image";
-import { FAQ } from "./FAQ";
-
-type FAQ = {
-  q: string;
-  a: string;
-  emoji: string;
-  flipped?: boolean;
-};
+import { FAQ, FAQType } from "./FAQ";
+import React from "react";
 
 type FAQs = {
-  faqs: FAQ[];
+  faqs: FAQType[];
 };
 
 export const FAQList = ({ faqs }: FAQs) => {
