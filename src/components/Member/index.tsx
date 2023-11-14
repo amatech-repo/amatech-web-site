@@ -15,7 +15,7 @@ export const Member = (props: Props) => {
   const { imageUrl, name, grade, role, github, twitter, instagram } = props;
 
   return (
-    <div className="font-YuGothic flex w-80 flex-row items-center rounded-3xl bg-white py-10 pl-8 pr-4 shadow-md transition-all hover:scale-105">
+    <div className="font-YuGothic flex min-w-[320px] flex-row items-center rounded-3xl bg-white px-8 py-10 shadow-md transition-all hover:scale-105">
       <div className="relative h-24 w-24 overflow-hidden rounded-full shadow-lg">
         <Image src={imageUrl} alt="" layout="fill" objectFit="cover" />
       </div>
