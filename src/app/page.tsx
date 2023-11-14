@@ -57,19 +57,7 @@ const faqs = [
   },
   {
     q: "掛け持ちは可能ですか？",
-    a: (
-      <>
-        可能です！
-        <Link
-          className="mr-0.5 text-amatech-log"
-          href="https://twitter.com/c_a_c_official"
-          target="_blank"
-        >
-          CAC
-        </Link>
-        や他サークルに入っている方も在籍しています！
-      </>
-    ),
+    a: <>可能です！CACや他サークルに入っている方も在籍しています！</>,
     emoji: "😆",
   },
 ];
