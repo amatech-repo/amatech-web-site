@@ -22,14 +22,14 @@ export const Footer = () => {
             alt="GitHub"
           />
           <LinkIcon
-            url="https://qiita.com/organizations/amatech"
-            img="/icons/qiita.svg"
-            alt="Qiita"
-          />
-          <LinkIcon
             url="https://twitter.com/amatech1006"
             img="/icons/x.svg"
             alt="X"
+          />
+          <LinkIcon
+            url="https://qiita.com/organizations/amatech"
+            img="/icons/qiita.svg"
+            alt="Qiita"
           />
         </div>
       </div>

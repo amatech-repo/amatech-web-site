@@ -15,8 +15,8 @@ export const Member = (props: Props) => {
   const { imageUrl, name, grade, role, github, twitter, instagram } = props;
 
   return (
-    <div className="font-YuGothic flex w-80 flex-row items-center rounded-3xl bg-white py-10 pl-8 pr-4 shadow-md transition-all hover:scale-105">
-      <div className="relative h-24 w-24 overflow-hidden rounded-full shadow-lg">
+    <div className="font-YuGothic flex min-w-[320px] flex-row items-center rounded-3xl bg-white px-8 py-10 shadow-md transition-all hover:scale-105">
+      <div className="relative h-24 w-24 overflow-hidden rounded-full shadow">
         <Image src={imageUrl} alt="" layout="fill" objectFit="cover" />
       </div>
       <div className="ml-4 flex flex-col justify-between">
@@ -30,7 +30,7 @@ export const Member = (props: Props) => {
           <p className="text-sm text-gray">{grade}</p>
         </div>
         {twitter || instagram || github ? (
-          <div className="mt-2 flex h-8 w-fit flex-row items-center justify-center space-x-2 rounded-full bg-white px-2 drop-shadow-lg">
+          <div className="mt-2 flex h-8 w-fit flex-row items-center justify-center space-x-2 rounded-full bg-white px-2 shadow">
             <SNS sns="twitter" snsID={twitter}></SNS>
             <SNS sns="instagram" snsID={instagram}></SNS>
             <SNS sns="github" snsID={github}></SNS>
