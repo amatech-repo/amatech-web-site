@@ -10,11 +10,27 @@ import { ActivityList } from "@/components/Activities/list";
 import { ImageSize, SectionTitle } from "@/components/SectionTitle";
 import { FAQList } from "@/components/FAQcomponents/FAQList";
 import { SNSCardList } from "@/components/SNSCard/list";
+import Link from "next/link";
 
 const faqs = [
   {
     q: "活動内容を具体的に教えて下さい！",
-    a: "活動内容をご覧ください！その他わからないこと、気になることがあればTwitterのDMへ気軽にお問い合わせください！",
+    a: (
+      <>
+        <Link className="text-amatech-log" href="#activities">
+          活動内容
+        </Link>
+        をご覧ください！その他わからないこと、気になることがあれば
+        <Link
+          className="mx-1 text-amatech-log"
+          href="https://twitter.com/amatech1006"
+          target="_blank"
+        >
+          X (Twitter)
+        </Link>
+        のDMへ気軽にお問い合わせください！
+      </>
+    ),
     emoji: "🚀",
   },
   {
@@ -24,12 +40,24 @@ const faqs = [
   },
   {
     q: "学年に制限はありますか？",
-    a: "京都産業大学に所属する方ならどなたでも歓迎します！他大学の方やコミュニティの方で興味ある方は、Twitter DMまでご連絡ください！",
+    a: (
+      <>
+        京都産業大学に所属する方ならどなたでも歓迎します！他大学の方やコミュニティの方で興味ある方は、
+        <Link
+          className="mr-1 text-amatech-log"
+          href="https://twitter.com/amatech1006"
+          target="_blank"
+        >
+          X (Twitter)
+        </Link>
+        DMまでご連絡ください！
+      </>
+    ),
     emoji: "🐣",
   },
   {
     q: "掛け持ちは可能ですか？",
-    a: "可能です！CACや他サークルに入っている方も在籍しています！",
+    a: <>可能です！CACや他サークルに入っている方も在籍しています！</>,
     emoji: "😆",
   },
 ];
@@ -68,6 +96,7 @@ export default async function Home() {
               title={"News"}
               subtitle={"最新情報"}
               image={ImageSize.small}
+              id="news"
             />
             <NewsList newsCards={news ? news : undefined}></NewsList>
           </section>
@@ -85,6 +114,7 @@ export default async function Home() {
               title={"Activities"}
               subtitle={"活動内容"}
               image={ImageSize.small}
+              id="activities"
             />
 
             <ActivityList />
