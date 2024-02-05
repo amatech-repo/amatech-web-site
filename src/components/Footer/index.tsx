@@ -34,7 +34,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="font-YuGothic col-start-1 col-end-[-1] row-start-2 text-center text-xs font-bold text-gray">
-        あまてく © 2023
+        あまてく © 2024
       </div>
     </footer>
   );

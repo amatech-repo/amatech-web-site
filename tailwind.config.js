@@ -40,8 +40,9 @@ module.exports = {
         32: "32px",
       },
       fontFamily: {
-        base: "YuGothic", // 游ゴシック
-        concept: "YuMincho", // 游明朝体
+        base: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif', // 游ゴシック
+        concept:
+          '"游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif', // 游明朝体
         title: "var(--font-urbanist)", // アーバニスト
       },
       animation: {
