@@ -56,7 +56,7 @@ export const Top = () => {
 
       {/* Text */}
       <div className="z-20 mx-6 flex max-w-full flex-col gap-10 sm:col-span-4 sm:col-start-2 sm:row-start-1 lg:mx-0">
-        <div className="whitespace-nowrap font-concept text-[9.4vw] font-extrabold leading-normal text-neutral-900 sm:text-4xl sm:leading-snug md:text-5xl lg:mt-10 lg:text-6xl lg:leading-snug">
+        <div className="whitespace-nowrap font-concept text-[9.4vw] font-extrabold leading-normal text-neutral-900 sm:text-4xl sm:leading-snug md:text-5xl md:leading-normal lg:mt-10 lg:text-6xl lg:leading-snug">
           どうせやるなら、
           <br />
           強くなろう。
@@ -85,7 +85,7 @@ const LogoImage = (isDummy: { isDummy?: boolean }) => {
       alt=""
       width={1200}
       height={1200}
-      className="drop-shadow-md"
+      className=""
     />
   );
 };
